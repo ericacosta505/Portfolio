@@ -1,10 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eric Acosta Portfolio</title>
-</head>
-<body>
-</body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: -apple-system, "SF Pro Display", "SF Pro Text", system-ui,
+          sans-serif;
+      }
+
+      body {
+        background-color: #1a1a1a;
+        color: #ffffff;
+      }
+
+      nav {
+        padding: 1.5rem 10%;
+        background-color: #252525;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #4a9eff;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: #4a9eff;
+      }
+
+      .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 0 10%;
+        background: linear-gradient(to right, #1a1a1a, #252525);
+      }
+
+      .hero-content {
+        max-width: 800px;
+      }
+
+      .hero-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-content p {
+        font-size: 1.2rem;
+        color: #b3b3b3;
+        margin-bottom: 2rem;
+      }
+
+      .cta-button {
+        padding: 0.8rem 2rem;
+        background-color: #4a9eff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .cta-button:hover {
+        background-color: #3182ce;
+      }
+
+      .projects {
+        padding: 6rem 10%;
+        background-color: #252525;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .project-card {
+        background-color: #1a1a1a;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .project-image {
+        width: 100%;
+        height: 200px;
+        background-color: #333;
+        object-fit: cover;
+      }
+
+      .project-content {
+        padding: 1.5rem;
+      }
+
+      .project-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .project-description {
+        color: #b3b3b3;
+        margin-bottom: 1.5rem;
+      }
+
+      .project-links {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .project-link {
+        padding: 0.5rem 1rem;
+        background-color: #4a9eff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .project-link:hover {
+        background-color: #3182ce;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">EA</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Hi, I'm Eric Acosta</h1>
+        <p>
+          A passionate Software Engineer crafting elegant solutions to complex
+          problems. Specializing in building robust and scalable applications
+          that make a difference.
+        </p>
+        <button class="cta-button">View My Work</button>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2 class="section-title">My Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img
+            src="assets/icarus-preview.jpeg"
+            alt="Project 1"
+            class="project-image"
+          />
+          <div class="project-content">
+            <h3 class="project-title">Icarus</h3>
+            <p class="project-description">
+              A user-friendly mobile application developed to simplify tracking
+              daily protein intake efficiently. Users can log their meals, and
+              the app dynamically updates a visual chart, offering an intuitive
+              and real-time representation of protein consumption progress
+              throughout the day. This application promotes healthier eating
+              habits by providing actionable insights and empowering users to
+              meet their dietary goals seamlessly.
+            </p>
+            <div class="project-links">
+              <a href="#" class="project-link">Live Demo</a>
+              <a href="#" class="project-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img
+            src="assets/albumatic-preview.jpeg"
+            alt="Project 2"
+            class="project-image"
+          />
+          <div class="project-content">
+            <h3 class="project-title">Albumatic</h3>
+            <p class="project-description">
+              Developed an innovative social media platform designed to elevate
+              user interaction through an advanced and robust database
+              architecture. The platform includes a comprehensive suite of
+              features, such as seamless user registration, intuitive profile
+              management, dynamic photo sharing, album creation, interactive
+              commenting, user tagging, and a personalized 'For You'
+              recommendation system powered by data-driven insights
+            </p>
+            <div class="project-links">
+              <a href="#" class="project-link">Live Demo</a>
+              <a href="#" class="project-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img
+            src="assets/dither-preview.jpeg"
+            alt="Project 3"
+            class="project-image"
+          />
+          <div class="project-content">
+            <h3 class="project-title">Dither-it</h3>
+            <p class="project-description">
+              An interactive webpage designed to visually demonstrate the impact
+              of different dithering algorithms on an image. This project
+              provides an intuitive platform for users to explore and compare
+              how various techniques alter image quality, color representation,
+              and overall aesthetic. The implementation highlights the nuances
+              of dithering algorithms, offering insights into their practical
+              applications in image processing and digital art.
+            </p>
+            <div class="project-links">
+              <a href="#" class="project-link">Live Demo</a>
+              <a href="#" class="project-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
