@@ -111,7 +111,6 @@
         border-radius: 10px;
         overflow: hidden;
         transition: transform 0.3s ease;
-        border: #ffffff solid 3px;
       }
 
       .project-card:hover {
@@ -200,6 +199,86 @@
       .skill-item:hover {
         transform: translateX(10px);
         background-color: #333;
+      }
+
+      .contact {
+        padding: 6rem 10%;
+        background-color: #252525;
+      }
+
+      .contact-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #1a1a1a;
+        padding: 3rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-form {
+        display: grid;
+        gap: 1.5rem;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .form-group label {
+        color: #4a9eff;
+        font-size: 1.1rem;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        padding: 0.8rem;
+        background-color: #333;
+        border: 1px solid #4a9eff;
+        border-radius: 5px;
+        color: white;
+        font-size: 1rem;
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 150px;
+      }
+
+      .submit-btn {
+        padding: 1rem 2rem;
+        background-color: #4a9eff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: fit-content;
+        justify-self: center;
+      }
+
+      .submit-btn:hover {
+        background-color: #3182ce;
+      }
+
+      .social-links {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      .social-link {
+        color: #4a9eff;
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .social-link:hover {
+        color: #3182ce;
       }
     </style>
   </head>
@@ -336,6 +415,32 @@
             <li class="skill-item">Docker</li>
             <li class="skill-item">AWS</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 class="section-title">Get in Touch</h2>
+      <div class="contact-container">
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+        <div class="social-links">
+          <a href="#" class="social-link">LinkedIn</a>
+          <a href="#" class="social-link">GitHub</a>
+          <a href="#" class="social-link">Twitter</a>
         </div>
       </div>
     </section>
