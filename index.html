@@ -157,6 +157,50 @@
       .project-link:hover {
         background-color: #3182ce;
       }
+
+      .skills {
+        padding: 6rem 10%;
+        background-color: #1a1a1a;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .skill-category {
+        background-color: #252525;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .skill-category h3 {
+        color: #4a9eff;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .skill-list {
+        list-style: none;
+      }
+
+      .skill-item {
+        color: #ffffff;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        background-color: #1a1a1a;
+        border-radius: 5px;
+        text-align: center;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+
+      .skill-item:hover {
+        transform: translateX(10px);
+        background-color: #333;
+      }
     </style>
   </head>
   <body>
@@ -255,6 +299,43 @@
               <a href="#" class="project-link">GitHub</a>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Frontend Development</h3>
+          <ul class="skill-list">
+            <li class="skill-item">HTML5</li>
+            <li class="skill-item">CSS3</li>
+            <li class="skill-item">JavaScript</li>
+            <li class="skill-item">React</li>
+            <li class="skill-item">TypeScript</li>
+            <li class="skill-item">Tailwind CSS</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3>Backend Development</h3>
+          <ul class="skill-list">
+            <li class="skill-item">Node.js</li>
+            <li class="skill-item">Express.js</li>
+            <li class="skill-item">Python</li>
+            <li class="skill-item">RESTful APIs</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3>Database & Tools</h3>
+          <ul class="skill-list">
+            <li class="skill-item">MongoDB</li>
+            <li class="skill-item">Git</li>
+            <li class="skill-item">Docker</li>
+            <li class="skill-item">AWS</li>
+          </ul>
         </div>
       </div>
     </section>
