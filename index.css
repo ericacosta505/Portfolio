@@ -65,7 +65,7 @@ nav {
   left: 0;
   width: 0;
   height: 2px;
-  background: #4a9eff;
+  background: #ff7a4a;
   transition: width 0.3s ease;
 }
 
@@ -74,7 +74,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: #4a9eff;
+  color: #ff7a4a;
   transform: translateY(-2px);
 }
 
