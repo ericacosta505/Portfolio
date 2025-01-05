@@ -2,18 +2,78 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s;
   font-family: -apple-system, "SF Pro Display", "SF Pro Text", system-ui,
     sans-serif;
 }
 
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --card-bg: #f5f5f5;
+  --nav-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --hero-bg: linear-gradient(135deg, #f5f5f5, #ffffff);
+  --project-bg: #f0f0f0;
+  --skills-bg: linear-gradient(135deg, #ffffff, #f5f5f5);
+  --contact-bg: linear-gradient(135deg, #f5f5f5, #ffffff);
+  --input-bg: rgba(51, 51, 51, 0.1);
+  --input-border: rgba(51, 51, 51, 0.3);
+  --skill-item-bg: rgba(255, 255, 255, 0.6);
+  --skill-item-hover: rgba(255, 255, 255, 0.8);
+  --project-shadow: rgba(0, 0, 0, 0.1);
+  --nav-shadow: rgba(0, 0, 0, 0.1);
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --form-shadow: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --card-bg: #2d2d2d;
+  --nav-bg: #2d2d2d;
+  --shadow: rgba(255, 255, 255, 0.1);
+  --hero-bg: radial-gradient(circle at top right, #252525, #0a0a0a);
+  --project-bg: #0f0f0f;
+  --skills-bg: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+  --contact-bg: radial-gradient(circle at bottom left, #252525, #0a0a0a);
+  --input-bg: rgba(51, 51, 51, 0.8);
+  --input-border: rgba(255, 122, 74, 0.3);
+  --skill-item-bg: rgba(26, 26, 26, 0.6);
+  --skill-item-hover: rgba(51, 51, 51, 0.8);
+  --project-shadow: rgba(0, 0, 0, 0.3);
+  --nav-shadow: rgba(0, 0, 0, 0.2);
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  --form-shadow: rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle {
+  margin-left: 20px;
+}
+
+#theme-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+#theme-toggle-btn:hover {
+  background-color: var(--card-bg);
+}
+
 body {
-  background-color: #0a0a0a;
-  color: #ffffff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 nav {
   padding: 1.5rem 10%;
-  background-color: rgba(20, 20, 20, 0.95);
+  background-color: var(--nav-bg);
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
@@ -22,7 +82,7 @@ nav {
   width: 100%;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 20px var(--nav-shadow);
 }
 
 .logo {
@@ -51,7 +111,7 @@ nav {
 }
 
 .nav-links a {
-  color: #ffffff;
+  color: var(--text-color);
   text-decoration: none;
   transition: all 0.3s ease;
   position: relative;
@@ -83,7 +143,7 @@ nav {
   display: flex;
   align-items: center;
   padding: 0 10%;
-  background: radial-gradient(circle at top right, #252525, #0a0a0a);
+  background: var(--hero-bg);
   position: relative;
   overflow: hidden;
 }
@@ -140,7 +200,7 @@ nav {
 
 .hero-content p {
   font-size: 1.2rem;
-  color: #b3b3b3;
+  color: var(--text-color);
   margin-bottom: 2rem;
   line-height: 1.6;
 }
@@ -164,7 +224,7 @@ nav {
 
 .projects {
   padding: 8rem 10%;
-  background-color: #0f0f0f;
+  background-color: var(--project-bg);
   position: relative;
 }
 
@@ -186,11 +246,11 @@ nav {
 }
 
 .project-card {
-  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+  background: var(--card-bg);
   border-radius: 15px;
   overflow: hidden;
   transition: all 0.4s ease;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px var(--project-shadow);
   transform-style: preserve-3d;
   opacity: 0;
   animation: fadeIn 0.8s ease forwards;
@@ -209,7 +269,7 @@ nav {
 
 .project-card:hover {
   transform: translateY(-10px) rotateX(5deg);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 15px 40px var(--card-shadow);
 }
 
 .project-image {
@@ -234,7 +294,7 @@ nav {
 }
 
 .project-description {
-  color: #b3b3b3;
+  color: var(--text-color);
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
@@ -262,7 +322,7 @@ nav {
 
 .skills {
   padding: 8rem 10%;
-  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+  background: var(--skills-bg);
 }
 
 .skills-grid {
@@ -272,10 +332,10 @@ nav {
 }
 
 .skill-category {
-  background: rgba(37, 37, 37, 0.5);
+  background: var(--card-bg);
   padding: 2.5rem;
   border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 30px var(--card-shadow);
   backdrop-filter: blur(10px);
   transform: translateY(30px);
   opacity: 0;
@@ -302,10 +362,10 @@ nav {
 }
 
 .skill-item {
-  color: #ffffff;
+  color: var(--text-color);
   margin-bottom: 1rem;
   padding: 1rem;
-  background: rgba(26, 26, 26, 0.6);
+  background: var(--skill-item-bg);
   border-radius: 10px;
   text-align: center;
   transition: all 0.4s ease;
@@ -314,23 +374,23 @@ nav {
 
 .skill-item:hover {
   transform: translateX(10px);
-  background: rgba(51, 51, 51, 0.8);
+  background: var(--skill-item-hover);
   border-color: #ff7a4a;
   box-shadow: 0 0 20px rgba(255, 122, 74, 0.2);
 }
 
 .contact {
   padding: 8rem 10%;
-  background: radial-gradient(circle at bottom left, #252525, #0a0a0a);
+  background: var(--contact-bg);
 }
 
 .contact-container {
   max-width: 800px;
   margin: 0 auto;
-  background: rgba(26, 26, 26, 0.8);
+  background: var(--card-bg);
   padding: 3.5rem;
   border-radius: 25px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 40px var(--form-shadow);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 122, 74, 0.1);
 }
@@ -355,10 +415,10 @@ nav {
 .form-group input,
 .form-group textarea {
   padding: 1rem;
-  background: rgba(51, 51, 51, 0.8);
-  border: 2px solid rgba(255, 122, 74, 0.3);
+  background: var(--input-bg);
+  border: 2px solid var(--input-border);
   border-radius: 10px;
-  color: white;
+  color: var(--text-color);
   font-size: 1rem;
   transition: all 0.3s ease;
 }
