@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eric Acosta Portfolio</title>
     <link href="index.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
     <nav>
@@ -32,7 +35,9 @@
           problems. Specializing in building robust and scalable applications
           that make a difference.
         </p>
-        <button class="cta-button" onclick="window.location.href='#projects'">View My Work</button>
+        <button class="cta-button" onclick="window.location.href='#projects'">
+          View My Work
+        </button>
       </div>
     </section>
 
@@ -57,7 +62,11 @@
               meet their dietary goals seamlessly.
             </p>
             <div class="project-links">
-              <a href="https://github.com/ericacosta505/icarus-mobile" class="project-link">GitHub</a>
+              <a
+                href="https://github.com/ericacosta505/icarus-mobile"
+                class="project-link"
+                >GitHub</a
+              >
             </div>
           </div>
         </div>
@@ -80,7 +89,11 @@
               recommendation system powered by data-driven insights.
             </p>
             <div class="project-links">
-              <a href="https://github.com/Campbell3377/SocialMedia" class="project-link">GitHub</a>
+              <a
+                href="https://github.com/Campbell3377/SocialMedia"
+                class="project-link"
+                >GitHub</a
+              >
             </div>
           </div>
         </div>
@@ -103,7 +116,11 @@
               applications in image processing and digital art.
             </p>
             <div class="project-links">
-              <a href="https://github.com/ericacosta505/dither-it" class="project-link">GitHub</a>
+              <a
+                href="https://github.com/ericacosta505/dither-it"
+                class="project-link"
+                >GitHub</a
+              >
             </div>
           </div>
         </div>
@@ -150,7 +167,7 @@
     <section id="contact" class="contact">
       <h2 class="section-title">Get in Touch</h2>
       <div class="contact-container">
-        <form class="contact-form">
+        <form class="contact-form" id="contact-form">
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required />
@@ -165,13 +182,58 @@
           </div>
           <button type="submit" class="submit-btn">Send Message</button>
         </form>
+        <div id="form-response" style="margin-top: 10px; color: #4caf50"></div>
         <div class="social-links">
-          <a href="https://www.linkedin.com/in/eric-acosta505/" class="social-link"><i class="fab fa-linkedin fa-2x"></i></a>
-          <a href="https://github.com/ericacosta505" class="social-link"><i class="fab fa-github fa-2x"></i></a>
+          <a
+            href="https://www.linkedin.com/in/eric-acosta505/"
+            class="social-link"
+            ><i class="fab fa-linkedin fa-2x"></i
+          ></a>
+          <a href="https://github.com/ericacosta505" class="social-link"
+            ><i class="fab fa-github fa-2x"></i
+          ></a>
         </div>
       </div>
     </section>
 
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const message = document.getElementById("message").value;
+          const formResponse = document.getElementById("form-response");
+
+          try {
+            const response = await fetch("http://localhost:4000/send", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ name, email, message }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+              formResponse.textContent = "Message sent successfully!";
+              formResponse.style.color = "#4caf50";
+              e.target.reset();
+            } else {
+              formResponse.textContent = `Error: ${data.error}`;
+              formResponse.style.color = "#f44336";
+            }
+          } catch (error) {
+            console.error("Error:", error);
+            formResponse.textContent =
+              "Failed to send message. Please try again later.";
+            formResponse.style.color = "#f44336";
+          }
+        });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script>
       const scene = new THREE.Scene();
@@ -230,24 +292,25 @@
       animate();
     </script>
     <script>
-      const themeToggleBtn = document.getElementById('theme-toggle-btn');
-      const themeIcon = themeToggleBtn.querySelector('i');
-    
-      const currentTheme = localStorage.getItem('theme') || 'light';
-      document.documentElement.setAttribute('data-theme', currentTheme);
+      const themeToggleBtn = document.getElementById("theme-toggle-btn");
+      const themeIcon = themeToggleBtn.querySelector("i");
+
+      const currentTheme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", currentTheme);
       updateThemeIcon(currentTheme);
-    
-      themeToggleBtn.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
+
+      themeToggleBtn.addEventListener("click", () => {
+        const currentTheme =
+          document.documentElement.getAttribute("data-theme");
+        const newTheme = currentTheme === "light" ? "dark" : "light";
+
+        document.documentElement.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
         updateThemeIcon(newTheme);
       });
-    
+
       function updateThemeIcon(theme) {
-        themeIcon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+        themeIcon.className = theme === "light" ? "fas fa-moon" : "fas fa-sun";
       }
     </script>
   </body>
