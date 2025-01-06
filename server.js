@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
+const path = require("path");
 require("dotenv").config();
 
 const app = express();
@@ -9,6 +10,8 @@ const PORT = process.env.PORT || 4000;
 
 app.use(cors());
 app.use(bodyParser.json());
+
+app.use(express.static(path.join(__dirname, "public")));
 
 app.post("/send", async (req, res) => {
   const { name, email, message } = req.body;
@@ -42,6 +45,10 @@ app.post("/send", async (req, res) => {
     console.error("Error sending email:", error);
     res.status(500).send({ error: "Failed to send message." });
   }
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 app.listen(PORT, () => {
