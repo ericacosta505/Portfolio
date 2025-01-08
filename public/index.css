@@ -25,6 +25,8 @@
   --nav-shadow: rgba(0, 0, 0, 0.1);
   --card-shadow: rgba(0, 0, 0, 0.1);
   --form-shadow: rgba(0, 0, 0, 0.1);
+  --timeline-line: #ff7a4a;
+  --timeline-dot: #ff7a4a;
 }
 
 [data-theme="dark"] {
@@ -45,6 +47,8 @@
   --nav-shadow: rgba(0, 0, 0, 0.2);
   --card-shadow: rgba(0, 0, 0, 0.3);
   --form-shadow: rgba(0, 0, 0, 0.3);
+  --timeline-line: #ff7a4a;
+  --timeline-dot: #ff7a4a;
 }
 
 .theme-toggle {
@@ -220,6 +224,109 @@ nav {
 .cta-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(255, 122, 74, 0.4);
+}
+
+.experience {
+  padding: 8rem 10%;
+  background: var(--bg-color);
+}
+
+.timeline-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: var(--timeline-line);
+}
+
+.timeline-item {
+  margin-bottom: 4rem;
+  position: relative;
+  width: 50%;
+  padding: 0 3rem;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-dot {
+  position: absolute;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background: var(--timeline-dot);
+  border-radius: 50%;
+  top: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -10px;
+}
+
+.timeline-content {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px var(--card-shadow);
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+}
+
+.timeline-content h3 {
+  color: #ff7a4a;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content h4 {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-date {
+  color: #ff7a4a;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.timeline-content ul {
+  list-style-type: none;
+}
+
+.timeline-content ul li {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.timeline-content ul li::before {
+  content: "•";
+  color: #ff7a4a;
+  position: absolute;
+  left: 0;
 }
 
 .projects {
