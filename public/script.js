@@ -109,3 +109,39 @@ themeToggleBtn.addEventListener("click", () => {
 function updateThemeIcon(theme) {
   themeIcon.className = theme === "light" ? "fas fa-moon" : "fas fa-sun";
 }
+
+function updateCanvasSize() {
+  const canvas = document.getElementById("torus-canvas");
+  canvas.style.width = "100%";
+  canvas.style.height = "100%";
+
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+window.addEventListener("resize", updateCanvasSize);
+updateCanvasSize();
+
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const navLinksItems = document.querySelectorAll(".nav-links a");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navLinks.classList.toggle("active");
+});
+
+navLinksItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
+  });
+});
+
+document.addEventListener("click", (e) => {
+  if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
+  }
+});
