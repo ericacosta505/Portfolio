@@ -36,23 +36,23 @@
     <section id="hero" class="hero">
       <canvas id="torus-canvas"></canvas>
       <div class="hero-content">
-        <h1>Hi, I'm Eric Acosta</h1>
-        <p>
+        <h1 class="scroll-fade-in">Hi, I'm Eric Acosta</h1>
+        <p class="scroll-slide-up">
           A passionate Software Engineer crafting elegant solutions to complex
           problems. Specializing in building robust and scalable applications
           that make a difference.
         </p>
-        <button class="cta-button" onclick="window.location.href='#projects'">
+        <button class="cta-button scroll-scale-in" onclick="window.location.href='#projects'">
           View My Work
         </button>
       </div>
     </section>
 
     <section id="experience" class="experience">
-      <h2 class="section-title">Work Experience</h2>
+      <h2 class="section-title scroll-fade-in">Work Experience</h2>
       <div class="timeline-container">
         <div class="timeline">
-          <div class="timeline-item">
+          <div class="timeline-item scroll-slide-left">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <h3>Assistant Director</h3>
@@ -76,7 +76,7 @@
             </div>
           </div>
 
-          <div class="timeline-item">
+          <div class="timeline-item scroll-slide-right">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <h3>Software Engineer</h3>
@@ -113,9 +113,9 @@
     </section>
 
     <section id="projects" class="projects">
-      <h2 class="section-title">Projects</h2>
+      <h2 class="section-title scroll-fade-in">Projects</h2>
       <div class="projects-grid">
-        <div class="project-card">
+        <div class="project-card scroll-slide-up scroll-stagger-1">
           <img
             src="assets/icarus-preview.jpeg"
             alt="Project 1"
@@ -142,7 +142,7 @@
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card scroll-slide-up scroll-stagger-2">
           <img
             src="assets/albumatic-preview.jpeg"
             alt="Project 2"
@@ -169,7 +169,7 @@
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card scroll-slide-up scroll-stagger-3">
           <img
             src="assets/dither-preview.jpeg"
             alt="Project 3"
@@ -199,9 +199,9 @@
     </section>
 
     <section id="skills" class="skills">
-      <h2 class="section-title">Skills</h2>
+      <h2 class="section-title scroll-fade-in">Skills</h2>
       <div class="skills-grid">
-        <div class="skill-category">
+        <div class="skill-category scroll-slide-left scroll-stagger-1">
           <h3>Frontend Development</h3>
           <ul class="skill-list">
             <li class="skill-item">HTML5</li>
@@ -213,7 +213,7 @@
           </ul>
         </div>
 
-        <div class="skill-category">
+        <div class="skill-category scroll-slide-up scroll-stagger-2">
           <h3>Backend Development</h3>
           <ul class="skill-list">
             <li class="skill-item">Node.js</li>
@@ -223,7 +223,7 @@
           </ul>
         </div>
 
-        <div class="skill-category">
+        <div class="skill-category scroll-slide-right scroll-stagger-3">
           <h3>Database & Tools</h3>
           <ul class="skill-list">
             <li class="skill-item">MongoDB</li>
@@ -236,10 +236,10 @@
     </section>
 
     <section id="education" class="education">
-      <h2 class="section-title">Education</h2>
+      <h2 class="section-title scroll-fade-in">Education</h2>
       <div class="timeline-container">
         <div class="timeline">
-          <div class="timeline-item">
+          <div class="timeline-item scroll-slide-up">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <h3>Bachelor of Science in Computer Science</h3>
@@ -255,25 +255,25 @@
     </section>
 
     <section id="contact" class="contact">
-      <h2 class="section-title">Get in Touch</h2>
-      <div class="contact-container">
+      <h2 class="section-title scroll-fade-in">Get in Touch</h2>
+      <div class="contact-container scroll-scale-in">
         <form class="contact-form" id="contact-form">
-          <div class="form-group">
+          <div class="form-group scroll-slide-left scroll-stagger-1">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required />
           </div>
-          <div class="form-group">
+          <div class="form-group scroll-slide-right scroll-stagger-2">
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required />
           </div>
-          <div class="form-group">
+          <div class="form-group scroll-slide-left scroll-stagger-3">
             <label for="message">Message</label>
             <textarea id="message" name="message" required></textarea>
           </div>
-          <button type="submit" class="submit-btn">Send Message</button>
+          <button type="submit" class="submit-btn scroll-slide-up scroll-stagger-4">Send Message</button>
         </form>
         <div id="form-response" style="margin-top: 10px; color: #4caf50"></div>
-        <div class="social-links">
+        <div class="social-links scroll-fade-in scroll-stagger-5">
           <a
             href="https://www.linkedin.com/in/eric-acosta505/"
             class="social-link"

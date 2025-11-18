@@ -146,33 +146,30 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Intersection Observer for fade-in animations
+// Enhanced Intersection Observer for comprehensive scroll animations
 const observerOptions = {
   threshold: 0.1,
   rootMargin: "0px 0px -50px 0px",
 };
 
-const observer = new IntersectionObserver((entries) => {
+const scrollObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.style.opacity = "1";
-      entry.target.style.transform = "translateY(0)";
-      observer.unobserve(entry.target);
+      // Add the animate class to trigger the animation
+      entry.target.classList.add("animate");
+      // Unobserve after animation to improve performance
+      scrollObserver.unobserve(entry.target);
     }
   });
 }, observerOptions);
 
-// Observe project cards
-document.querySelectorAll(".project-card").forEach((card) => {
-  card.style.opacity = "0";
-  card.style.transform = "translateY(30px)";
-  card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-  observer.observe(card);
-});
+// Observe all scroll animation elements
+const scrollElements = document.querySelectorAll(
+  ".scroll-fade-in, .scroll-slide-left, .scroll-slide-right, .scroll-slide-up, .scroll-scale-in"
+);
 
-// Observe skill categories
-document.querySelectorAll(".skill-category").forEach((category) => {
-  observer.observe(category);
+scrollElements.forEach((element) => {
+  scrollObserver.observe(element);
 });
 
 // Navbar scroll effect
