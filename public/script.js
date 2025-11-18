@@ -53,8 +53,8 @@ renderer.setPixelRatio(window.devicePixelRatio);
 
 const geometry = new THREE.TorusGeometry(5, 1.5, 16, 100);
 const material = new THREE.MeshPhongMaterial({
-  color: 0xff7a4a,
-  emissive: 0xff5e3a,
+  color: 0x00d4ff,
+  emissive: 0x0099cc,
   emissiveIntensity: 0.2,
   shininess: 50,
   opacity: 0.9,
@@ -64,10 +64,10 @@ const torus = new THREE.Mesh(geometry, material);
 torus.position.x = 8;
 scene.add(torus);
 
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
 scene.add(ambientLight);
 
-const pointLight = new THREE.PointLight(0xff7a4a, 1);
+const pointLight = new THREE.PointLight(0x00d4ff, 1);
 pointLight.position.set(18, 10, 10);
 scene.add(pointLight);
 
@@ -90,25 +90,8 @@ window.addEventListener("resize", () => {
 
 animate();
 
-const themeToggleBtn = document.getElementById("theme-toggle-btn");
-const themeIcon = themeToggleBtn.querySelector("i");
-
-const currentTheme = localStorage.getItem("theme") || "light";
-document.documentElement.setAttribute("data-theme", currentTheme);
-updateThemeIcon(currentTheme);
-
-themeToggleBtn.addEventListener("click", () => {
-  const currentTheme = document.documentElement.getAttribute("data-theme");
-  const newTheme = currentTheme === "light" ? "dark" : "light";
-
-  document.documentElement.setAttribute("data-theme", newTheme);
-  localStorage.setItem("theme", newTheme);
-  updateThemeIcon(newTheme);
-});
-
-function updateThemeIcon(theme) {
-  themeIcon.className = theme === "light" ? "fas fa-moon" : "fas fa-sun";
-}
+// Set dark theme by default
+document.documentElement.setAttribute("data-theme", "dark");
 
 function updateCanvasSize() {
   const canvas = document.getElementById("torus-canvas");
