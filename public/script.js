@@ -51,33 +51,40 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 
-const geometry = new THREE.TorusGeometry(5, 1.5, 16, 100);
+const geometry = new THREE.TorusKnotGeometry(4.2, 1.05, 160, 20, 2, 3);
 const material = new THREE.MeshPhongMaterial({
-  color: 0x00d4ff,
-  emissive: 0x0099cc,
-  emissiveIntensity: 0.2,
-  shininess: 50,
-  opacity: 0.9,
+  color: 0xff6b4a,
+  emissive: 0xff3a1a,
+  emissiveIntensity: 0.18,
+  shininess: 80,
+  transparent: true,
+  opacity: 0.72,
+  wireframe: false,
 });
 
 const torus = new THREE.Mesh(geometry, material);
-torus.position.x = 8;
+torus.position.x = 10;
+torus.position.y = 0.5;
 scene.add(torus);
 
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.25);
 scene.add(ambientLight);
 
-const pointLight = new THREE.PointLight(0x00d4ff, 1);
+const pointLight = new THREE.PointLight(0xff6b4a, 1.2);
 pointLight.position.set(18, 10, 10);
 scene.add(pointLight);
+
+const rimLight = new THREE.PointLight(0xe8ff59, 0.45);
+rimLight.position.set(-10, -6, 8);
+scene.add(rimLight);
 
 camera.position.z = 15;
 
 function animate() {
   requestAnimationFrame(animate);
 
-  torus.rotation.x += 0.01;
-  torus.rotation.y += 0.005;
+  torus.rotation.x += 0.0035;
+  torus.rotation.y += 0.0025;
 
   renderer.render(scene, camera);
 }
@@ -173,19 +180,12 @@ scrollElements.forEach((element) => {
 });
 
 // Navbar scroll effect
-let lastScroll = 0;
 const nav = document.querySelector("nav");
 
 window.addEventListener("scroll", () => {
-  const currentScroll = window.pageYOffset;
-  
-  if (currentScroll > 100) {
-    nav.style.boxShadow = "0 4px 30px var(--nav-shadow)";
-    nav.style.padding = "1rem 10%";
+  if (window.pageYOffset > 40) {
+    nav.classList.add("scrolled");
   } else {
-    nav.style.boxShadow = "0 4px 30px var(--nav-shadow)";
-    nav.style.padding = "1.25rem 10%";
+    nav.classList.remove("scrolled");
   }
-  
-  lastScroll = currentScroll;
-});
+}, { passive: true });

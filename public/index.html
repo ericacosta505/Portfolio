@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eric Acosta Portfolio</title>
+    <meta name="description" content="Eric Acosta — Software Engineer based in Austin, Texas. Crafting thoughtful, performant software." />
+    <title>Eric Acosta — Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link href="index.css" rel="stylesheet" />
@@ -18,152 +19,137 @@
   </head>
   <body>
     <nav>
+      <a href="#hero" class="logo">eric acosta</a>
+      <div class="nav-links">
+        <a href="#experience">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
       <button class="hamburger" aria-label="Toggle menu">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
       </button>
-      <div class="logo">EA</div>
-      <div class="nav-links">
-        <a href="#hero">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </div>
     </nav>
 
     <section id="hero" class="hero">
       <canvas id="torus-canvas"></canvas>
       <div class="hero-content">
-        <h1 class="scroll-fade-in">Hi, I'm Eric Acosta</h1>
-        <p class="scroll-slide-up">
-          A passionate Software Engineer crafting elegant solutions to complex
-          problems. Specializing in building robust and scalable applications
-          that make a difference.
+        <div class="hero-kicker scroll-fade-in">
+          <span class="dot"></span>
+          Available for new opportunities
+        </div>
+        <h1 class="scroll-slide-up scroll-stagger-1">
+          Software engineer<br />
+          building <span class="serif">thoughtful</span><br />
+          digital products.
+        </h1>
+        <p class="scroll-slide-up scroll-stagger-2">
+          I'm Eric — a software engineer based in Austin, Texas. I design and
+          ship performant, human-centered software across the full stack, from
+          intuitive interfaces to resilient backend systems.
         </p>
-        <button class="cta-button scroll-scale-in" onclick="window.location.href='#projects'">
-          View My Work
-        </button>
+        <div class="hero-actions scroll-slide-up scroll-stagger-3">
+          <a href="#projects" class="btn btn-primary">
+            View selected work <span class="arrow">→</span>
+          </a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span>Location</span>
+          <span>Austin, TX</span>
+        </div>
+        <div class="hero-meta-item">
+          <span>Currently</span>
+          <span>iCode — Technology Associate</span>
+        </div>
+        <div class="hero-meta-item">
+          <span>Year</span>
+          <span>2026</span>
+        </div>
       </div>
     </section>
 
     <section id="experience" class="experience">
-      <h2 class="section-title scroll-fade-in">Work Experience</h2>
+      <div class="section-header scroll-fade-in">
+        <div>
+          <div class="section-label">01 — Experience</div>
+          <h2 class="section-title">
+            A track record of <em>building</em> and leading.
+          </h2>
+        </div>
+        <p class="section-intro">
+          Spanning software engineering, education, and early-stage product —
+          here are the roles that shaped how I build today.
+        </p>
+      </div>
+
       <div class="timeline-container">
         <div class="timeline">
-          <div class="timeline-item scroll-slide-left scroll-stagger-1">
-            <div class="timeline-dot"></div>
+          <div class="timeline-item scroll-slide-up scroll-stagger-1">
+            <div class="timeline-date">Nov 2025 — Present</div>
             <div class="timeline-content">
               <h3>Technology Associate</h3>
-              <h4>iCode School Franchise - Austin, TX</h4>
-              <p class="timeline-date">November 2025 - Present</p>
+              <h4>iCode School Franchise · Austin, TX</h4>
               <ul>
-                <li>
-                  Support IT operations, data management, and STEM instruction for a fast-paced technology education center
-                </li>
-                <li>
-                  Maintain and document internal systems, tools, and integrations
-                </li>
-                <li>
-                  Provide technical support for software, hardware, and classroom technology
-                </li>
-                <li>
-                  Support data reporting and analytics to guide operational decisions
-                </li>
-                <li>
-                  Perform QA testing on platforms and data flows to ensure reliability
-                </li>
-                <li>
-                  Teach iCode Belt Program courses in coding, game development, and engineering
-                </li>
-                <li>
-                  Represent iCode at community events and assist with curriculum improvements
-                </li>
+                <li>Support IT operations, data management, and STEM instruction for a fast-paced technology education center.</li>
+                <li>Maintain and document internal systems, tools, and integrations.</li>
+                <li>Provide technical support for software, hardware, and classroom technology.</li>
+                <li>Support data reporting and analytics to guide operational decisions.</li>
+                <li>Perform QA testing on platforms and data flows to ensure reliability.</li>
+                <li>Teach iCode Belt Program courses in coding, game development, and engineering.</li>
+                <li>Represent iCode at community events and assist with curriculum improvements.</li>
               </ul>
             </div>
           </div>
 
-          <div class="timeline-item scroll-slide-right scroll-stagger-2">
-            <div class="timeline-dot"></div>
+          <div class="timeline-item scroll-slide-up scroll-stagger-2">
+            <div class="timeline-date">Aug 2024 — Nov 2025</div>
             <div class="timeline-content">
               <h3>Campus Director</h3>
-              <h4>iCode School Franchise - Austin, TX</h4>
-              <p class="timeline-date">August 2024 - November 2025</p>
+              <h4>iCode School Franchise · Austin, TX</h4>
               <ul>
-                <li>
-                  Led enrollment growth, community partnerships, and instructional excellence for a STEM education center serving K-12 students
-                </li>
-                <li>
-                  Drove enrollment growth through marketing funnels (email, social, community outreach), resulting in a 30% increase in net new students
-                </li>
-                <li>
-                  Expanded school partnerships and secured MOUs with three campuses, bringing after-school STEM programs to 100+ students
-                </li>
-                <li>
-                  Supervised and developed a cross-functional team of instructors and operational staff to ensure exceptional educational outcomes
-                </li>
-                <li>
-                  Collaborated across marketing, curriculum, and operations to improve enrollment processes, lead nurturing, and student experience
-                </li>
-                <li>
-                  Represented iCode at community and district events to strengthen brand awareness and build long-term relationships
-                </li>
+                <li>Led enrollment growth, community partnerships, and instructional excellence for a STEM education center serving K-12 students.</li>
+                <li>Drove enrollment growth through marketing funnels (email, social, community outreach), resulting in a 30% increase in net new students.</li>
+                <li>Expanded school partnerships and secured MOUs with three campuses, bringing after-school STEM programs to 100+ students.</li>
+                <li>Supervised and developed a cross-functional team of instructors and operational staff to ensure exceptional educational outcomes.</li>
+                <li>Collaborated across marketing, curriculum, and operations to improve enrollment processes, lead nurturing, and student experience.</li>
+                <li>Represented iCode at community and district events to strengthen brand awareness and build long-term relationships.</li>
               </ul>
             </div>
           </div>
 
-          <div class="timeline-item scroll-slide-left scroll-stagger-3">
-            <div class="timeline-dot"></div>
+          <div class="timeline-item scroll-slide-up scroll-stagger-3">
+            <div class="timeline-date">May 2023 — Aug 2024</div>
             <div class="timeline-content">
               <h3>Assistant Campus Director</h3>
-              <h4>iCode School Franchise - Austin, TX</h4>
-              <p class="timeline-date">May 2023 - August 2024</p>
+              <h4>iCode School Franchise · Austin, TX</h4>
               <ul>
-                <li>
-                  Led and closed instructional trial classes tailored to each student's interests and skill level, driving enrollments and revenue goals
-                </li>
-                <li>
-                  Managed daily office operations, instructor scheduling, and parent communications to ensure seamless center performance
-                </li>
-                <li>
-                  Collaborated with the Director and instructional team to improve program placement, student experience, and retention outcomes
-                </li>
-                <li>
-                  Served as primary point of contact for families, providing guidance on curriculum pathways, scheduling, and center policies
-                </li>
-                <li>
-                  Supported marketing and community outreach efforts to increase visibility and demand for STEM programs
-                </li>
+                <li>Led and closed instructional trial classes tailored to each student's interests and skill level, driving enrollments and revenue goals.</li>
+                <li>Managed daily office operations, instructor scheduling, and parent communications to ensure seamless center performance.</li>
+                <li>Collaborated with the Director and instructional team to improve program placement, student experience, and retention outcomes.</li>
+                <li>Served as primary point of contact for families, providing guidance on curriculum pathways, scheduling, and center policies.</li>
+                <li>Supported marketing and community outreach efforts to increase visibility and demand for STEM programs.</li>
               </ul>
             </div>
           </div>
 
-          <div class="timeline-item scroll-slide-right scroll-stagger-4">
-            <div class="timeline-dot"></div>
+          <div class="timeline-item scroll-slide-up scroll-stagger-4">
+            <div class="timeline-date">Jan 2023 — Feb 2024</div>
             <div class="timeline-content">
-              <h3>Co-Founder | Developer</h3>
-              <h4>Lafellus - Tempe, AZ</h4>
-              <p class="timeline-date">January 2023 - February 2024</p>
+              <h3>Co-Founder · Developer</h3>
+              <h4>Lafellus · Tempe, AZ</h4>
               <ul>
-                <li>
-                  Co-founded Lafellus, an early-stage venture focused on developing an AI-powered plagiarism detection platform for academic and professional content integrity
-                </li>
-                <li>
-                  Helped define product requirements and model approach for an AI plagiarism detection engine aimed at improving originality verification
-                </li>
-                <li>
-                  Secured early-stage funding through ASU Venture Devils, supporting initial research, prototyping, and brand development
-                </li>
-                <li>
-                  Designed and developed the Lafellus marketing website to articulate value proposition, capture early interest, and support investor conversations
-                </li>
-                <li>
-                  Conducted competitive research on plagiarism and content-scoring tools to inform product positioning and feature roadmap
-                </li>
-                <li>
-                  Collaborated with cofounders on go-to-market strategy, pitch materials, and customer discovery interviews within academic communities
-                </li>
+                <li>Co-founded Lafellus, an early-stage venture focused on developing an AI-powered plagiarism detection platform for academic and professional content integrity.</li>
+                <li>Helped define product requirements and model approach for an AI plagiarism detection engine aimed at improving originality verification.</li>
+                <li>Secured early-stage funding through ASU Venture Devils, supporting initial research, prototyping, and brand development.</li>
+                <li>Designed and developed the Lafellus marketing website to articulate value proposition, capture early interest, and support investor conversations.</li>
+                <li>Conducted competitive research on plagiarism and content-scoring tools to inform product positioning and feature roadmap.</li>
+                <li>Collaborated with cofounders on go-to-market strategy, pitch materials, and customer discovery interviews within academic communities.</li>
               </ul>
             </div>
           </div>
@@ -172,131 +158,142 @@
     </section>
 
     <section id="projects" class="projects">
-      <h2 class="section-title scroll-fade-in">Projects</h2>
+      <div class="section-header scroll-fade-in">
+        <div>
+          <div class="section-label">02 — Projects</div>
+          <h2 class="section-title">
+            Selected work, <em>built</em> from scratch.
+          </h2>
+        </div>
+        <p class="section-intro">
+          A collection of projects spanning mobile apps, social platforms,
+          image processing, and personal finance tools.
+        </p>
+      </div>
+
       <div class="projects-grid">
-        <div class="project-card scroll-slide-up scroll-stagger-1">
-          <img
-            src="assets/icarus-preview.jpeg"
-            alt="Project 1"
-            class="project-image"
-          />
+        <article class="project-card scroll-slide-up scroll-stagger-1">
+          <a href="https://github.com/ericacosta505/icarus-mobile" class="project-image-wrap">
+            <span class="project-number">01</span>
+            <img src="assets/icarus-preview.jpeg" alt="Icarus mobile app preview" class="project-image" />
+          </a>
           <div class="project-content">
-            <h3 class="project-title">Icarus</h3>
+            <div class="project-heading-row">
+              <h3 class="project-title">Icarus<span class="serif-em">.</span></h3>
+              <span class="project-year">2024</span>
+            </div>
             <p class="project-description">
-              A user-friendly mobile application developed to simplify tracking
-              daily protein intake efficiently. Users can log their meals, and
-              the app dynamically updates a visual chart, offering an intuitive
-              and real-time representation of protein consumption progress
-              throughout the day. This application promotes healthier eating
-              habits by providing actionable insights and empowering users to
-              meet their dietary goals seamlessly.
+              A mobile app that makes tracking daily protein intake effortless.
+              Log meals and watch a dynamic visual chart update in real time —
+              turning dietary goals into simple, actionable progress.
             </p>
             <div class="project-links">
-              <a
-                href="https://github.com/ericacosta505/icarus-mobile"
-                class="project-link"
-                >GitHub</a
-              >
+              <a href="https://github.com/ericacosta505/icarus-mobile" class="project-link">
+                GitHub <span class="arrow">↗</span>
+              </a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="project-card scroll-slide-up scroll-stagger-2">
-          <img
-            src="assets/albumatic-preview.jpeg"
-            alt="Project 2"
-            class="project-image"
-          />
+        <article class="project-card scroll-slide-up scroll-stagger-2">
+          <a href="https://github.com/Campbell3377/SocialMedia" class="project-image-wrap">
+            <span class="project-number">02</span>
+            <img src="assets/albumatic-preview.jpeg" alt="Albumatic social platform preview" class="project-image" />
+          </a>
           <div class="project-content">
-            <h3 class="project-title">Albumatic</h3>
+            <div class="project-heading-row">
+              <h3 class="project-title">Albumatic<span class="serif-em">.</span></h3>
+              <span class="project-year">2023</span>
+            </div>
             <p class="project-description">
-              Developed an innovative social media platform designed to elevate
-              user interaction through an advanced and robust database
-              architecture. The platform includes a comprehensive suite of
-              features, such as seamless user registration, intuitive profile
-              management, dynamic photo sharing, album creation, interactive
-              commenting, user tagging, and a personalized 'For You'
-              recommendation system powered by data-driven insights.
+              A social platform built on a robust relational architecture —
+              registration, profiles, photo sharing, albums, comments, user
+              tagging, and a personalized "For You" recommendation system.
             </p>
             <div class="project-links">
-              <a
-                href="https://github.com/Campbell3377/SocialMedia"
-                class="project-link"
-                >GitHub</a
-              >
+              <a href="https://github.com/Campbell3377/SocialMedia" class="project-link">
+                GitHub <span class="arrow">↗</span>
+              </a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="project-card scroll-slide-up scroll-stagger-3">
-          <img
-            src="assets/dither-preview.jpeg"
-            alt="Project 3"
-            class="project-image"
-          />
+        <article class="project-card scroll-slide-up scroll-stagger-3">
+          <a href="https://dither-it.onrender.com" class="project-image-wrap">
+            <span class="project-number">03</span>
+            <img src="assets/dither-preview.jpeg" alt="Dither-it preview" class="project-image" />
+          </a>
           <div class="project-content">
-            <h3 class="project-title">Dither-it</h3>
+            <div class="project-heading-row">
+              <h3 class="project-title">Dither-it<span class="serif-em">.</span></h3>
+              <span class="project-year">2023</span>
+            </div>
             <p class="project-description">
-              An interactive webpage designed to visually demonstrate the impact
-              of different dithering algorithms on an image. This project
-              provides an intuitive platform for users to explore and compare
-              how various techniques alter image quality, color representation,
-              and overall aesthetic. The implementation highlights the nuances
-              of dithering algorithms, offering insights into their practical
-              applications in image processing and digital art.
+              An interactive playground for comparing dithering algorithms
+              across images — exploring how each technique alters quality,
+              color, and aesthetic. Equal parts research tool and digital art.
             </p>
             <div class="project-links">
-              <a
-                href="https://github.com/ericacosta505/dither-it"
-                class="project-link"
-                >GitHub</a
-              >
-              <a
-                href="https://dither-it.onrender.com"
-                class="project-link"
-                >Live Demo</a
-              >
+              <a href="https://github.com/ericacosta505/dither-it" class="project-link">
+                GitHub <span class="arrow">↗</span>
+              </a>
+              <a href="https://dither-it.onrender.com" class="project-link">
+                Live <span class="arrow">↗</span>
+              </a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="project-card scroll-slide-up scroll-stagger-4">
-          <img
-            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=240&fit=crop&crop=center"
-            alt="Budget Tracker Project"
-            class="project-image"
-          />
+        <article class="project-card scroll-slide-up scroll-stagger-4">
+          <a href="https://budget-3a0l.onrender.com" class="project-image-wrap">
+            <span class="project-number">04</span>
+            <img
+              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=550&fit=crop&crop=center"
+              alt="Budget Tracker preview"
+              class="project-image"
+            />
+          </a>
           <div class="project-content">
-            <h3 class="project-title">Budget Tracker</h3>
+            <div class="project-heading-row">
+              <h3 class="project-title">Budget Tracker<span class="serif-em">.</span></h3>
+              <span class="project-year">2025</span>
+            </div>
             <p class="project-description">
-              A full-stack personal budget tracking application that helps you manage
-              your finances using the 50/30/20 budgeting rule (Needs/Wants/Savings).
-              Track your income and expenses, visualize your spending patterns with
-              interactive charts, and stay on top of your financial goals. Features
-              user authentication, real-time summaries, and responsive design.
+              A full-stack personal finance app built on the 50/30/20 rule.
+              Track income and expenses, visualize spending, and stay on
+              target — with authentication, live summaries, and a responsive
+              interface.
             </p>
             <div class="project-links">
-              <a
-                href="https://github.com/ericacosta505/Budget"
-                class="project-link"
-                >GitHub</a
-              >
-              <a
-                href="https://budget-3a0l.onrender.com"
-                class="project-link"
-                >Live Demo</a
-              >
+              <a href="https://github.com/ericacosta505/Budget" class="project-link">
+                GitHub <span class="arrow">↗</span>
+              </a>
+              <a href="https://budget-3a0l.onrender.com" class="project-link">
+                Live <span class="arrow">↗</span>
+              </a>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
     <section id="skills" class="skills">
-      <h2 class="section-title scroll-fade-in">Skills</h2>
+      <div class="section-header scroll-fade-in">
+        <div>
+          <div class="section-label">03 — Skills</div>
+          <h2 class="section-title">
+            Tools of the <em>trade</em>.
+          </h2>
+        </div>
+        <p class="section-intro">
+          The languages, frameworks, and platforms I reach for to build
+          everything from quick prototypes to production systems.
+        </p>
+      </div>
+
       <div class="skills-grid">
-        <div class="skill-category scroll-slide-left scroll-stagger-1">
-          <h3>Frontend Development</h3>
+        <div class="skill-category scroll-slide-up scroll-stagger-1">
+          <h3>Frontend</h3>
           <ul class="skill-list">
             <li class="skill-item">HTML5</li>
             <li class="skill-item">CSS3</li>
@@ -309,19 +306,19 @@
         </div>
 
         <div class="skill-category scroll-slide-up scroll-stagger-2">
-          <h3>Backend Development</h3>
+          <h3>Backend</h3>
           <ul class="skill-list">
             <li class="skill-item">Node.js</li>
             <li class="skill-item">Express.js</li>
             <li class="skill-item">Python</li>
             <li class="skill-item">Flask</li>
             <li class="skill-item">Java</li>
-            <li class="skill-item">RESTful APIs</li>
-            <li class="skill-item">JWT Authentication</li>
+            <li class="skill-item">REST APIs</li>
+            <li class="skill-item">JWT</li>
           </ul>
         </div>
 
-        <div class="skill-category scroll-slide-right scroll-stagger-3">
+        <div class="skill-category scroll-slide-up scroll-stagger-3">
           <h3>Database & DevOps</h3>
           <ul class="skill-list">
             <li class="skill-item">MongoDB</li>
@@ -333,8 +330,8 @@
           </ul>
         </div>
 
-        <div class="skill-category scroll-slide-left scroll-stagger-4">
-          <h3>Tools & Technologies</h3>
+        <div class="skill-category scroll-slide-up scroll-stagger-4">
+          <h3>Tooling</h3>
           <ul class="skill-list">
             <li class="skill-item">GitHub</li>
             <li class="skill-item">Postman</li>
@@ -348,17 +345,28 @@
     </section>
 
     <section id="education" class="education">
-      <h2 class="section-title scroll-fade-in">Education</h2>
+      <div class="section-header scroll-fade-in">
+        <div>
+          <div class="section-label">04 — Education</div>
+          <h2 class="section-title">
+            Formal <em>foundations</em>.
+          </h2>
+        </div>
+        <p class="section-intro">
+          Where computer science stopped being a hobby and started becoming a
+          discipline.
+        </p>
+      </div>
+
       <div class="timeline-container">
         <div class="timeline">
           <div class="timeline-item scroll-slide-up">
-            <div class="timeline-dot"></div>
+            <div class="timeline-date">2019 — 2023</div>
             <div class="timeline-content">
-              <h3>Bachelor of Science in Computer Science</h3>
-              <h4>Arizona State University - Tempe, AZ</h4>
-              <p class="timeline-date">2019 - 2023</p>
+              <h3>B.S. Computer Science</h3>
+              <h4>Arizona State University · Tempe, AZ</h4>
               <ul>
-                <li>GPA: 3.4/4.0</li>
+                <li>Graduated with a 3.4 / 4.0 GPA.</li>
               </ul>
             </div>
           </div>
@@ -367,36 +375,65 @@
     </section>
 
     <section id="contact" class="contact">
-      <h2 class="section-title scroll-fade-in">Get in Touch</h2>
-      <div class="contact-container scroll-scale-in">
-        <form class="contact-form" id="contact-form">
-          <div class="form-group scroll-slide-left scroll-stagger-1">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
+      <div class="contact-wrap">
+        <div class="contact-intro scroll-slide-up">
+          <div class="section-label" style="margin-bottom: 1.25rem">05 — Contact</div>
+          <h2>Let's build something <em>together</em>.</h2>
+          <p>
+            Whether you've got a role, a project, or just want to swap notes on
+            something interesting — my inbox is open. I'll get back to you
+            within a day or two.
+          </p>
+          <div class="contact-direct">
+            <a href="mailto:acosta.eric505@icloud.com" class="contact-link">
+              <i class="far fa-envelope"></i> acosta.eric505@icloud.com
+            </a>
+            <a href="https://www.linkedin.com/in/eric-acosta505/" class="contact-link">
+              <i class="fab fa-linkedin-in"></i> linkedin.com/in/eric-acosta505
+            </a>
+            <a href="https://github.com/ericacosta505" class="contact-link">
+              <i class="fab fa-github"></i> github.com/ericacosta505
+            </a>
           </div>
-          <div class="form-group scroll-slide-right scroll-stagger-2">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="form-group scroll-slide-left scroll-stagger-3">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <button type="submit" class="submit-btn scroll-slide-up scroll-stagger-4">Send Message</button>
-        </form>
-        <div id="form-response" style="margin-top: 10px; color: #4caf50"></div>
-        <div class="social-links scroll-fade-in scroll-stagger-5">
-          <a
-            href="https://www.linkedin.com/in/eric-acosta505/"
-            class="social-link"
-            ><i class="fab fa-linkedin fa-2x"></i
-          ></a>
-          <a href="https://github.com/ericacosta505" class="social-link"
-            ><i class="fab fa-github fa-2x"></i
-          ></a>
         </div>
+
+        <form class="contact-form scroll-slide-up scroll-stagger-2" id="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me a bit about what you're working on…" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">
+            Send message <span class="arrow">→</span>
+          </button>
+          <div id="form-response"></div>
+        </form>
       </div>
     </section>
+
+    <footer>
+      <div class="footer-left">
+        © 2026 Eric Acosta — Crafted with care in Austin, TX
+      </div>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/eric-acosta505/" class="social-link" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/ericacosta505" class="social-link" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:acosta.eric505@icloud.com" class="social-link" aria-label="Email">
+          <i class="far fa-envelope"></i>
+        </a>
+      </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
