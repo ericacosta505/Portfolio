@@ -1,441 +1,320 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Eric Acosta — Software Engineer based in Austin, Texas. Crafting thoughtful, performant software." />
-    <title>Eric Acosta — Software Engineer</title>
+    <meta
+      name="description"
+      content="Eric Acosta is a Senior Software Engineer building products at FoundryZero, including Mosaic for iOS and Android."
+    />
+    <meta name="theme-color" content="#f4f4ef" />
+    <title>Eric Acosta — Senior Software Engineer</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&amp;family=Geist:wght@100..900&amp;display=swap"
       rel="stylesheet"
     />
-    <link href="index.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <nav>
-      <a href="#hero" class="logo">eric acosta</a>
-      <div class="nav-links">
-        <a href="#experience">Work</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page-progress" aria-hidden="true"><i></i></div>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Eric Acosta, home">
+        <span>ERIC ACOSTA</span>
+        <i aria-hidden="true"></i>
+      </a>
+
+      <div class="header-status" aria-label="Current location and time">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>AUSTIN</span>
+        <time id="austin-time">--:-- CT</time>
       </div>
-      <button class="hamburger" aria-label="Toggle menu">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation">
+        <span>MENU</span>
+        <i aria-hidden="true"></i>
       </button>
-    </nav>
 
-    <section id="hero" class="hero">
-      <canvas id="torus-canvas"></canvas>
-      <div class="hero-content">
-        <div class="hero-kicker scroll-fade-in">
-          <span class="dot"></span>
-          Available for new opportunities
+      <nav class="navigation" id="navigation" aria-label="Main navigation">
+        <a href="#work"><span>01</span>Work</a>
+        <a href="#about"><span>02</span>About</a>
+        <a href="#history"><span>03</span>History</a>
+        <a href="#contact"><span>04</span>Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-eyebrow reveal">
+          <span>SENIOR SOFTWARE ENGINEER</span>
+          <span>PORTFOLIO / 2026</span>
         </div>
-        <h1 class="scroll-slide-up scroll-stagger-1">
-          Software engineer<br />
-          building <span class="serif">thoughtful</span><br />
-          digital products.
+
+        <h1 aria-label="I build products from zero to live">
+          <span class="reveal">I build products</span>
+          <span class="reveal">from zero to <em>live.</em></span>
         </h1>
-        <p class="scroll-slide-up scroll-stagger-2">
-          I'm Eric — a software engineer based in Austin, Texas. I design and
-          ship performant, human-centered software across the full stack, from
-          intuitive interfaces to resilient backend systems.
-        </p>
-        <div class="hero-actions scroll-slide-up scroll-stagger-3">
-          <a href="#projects" class="btn btn-primary">
-            View selected work <span class="arrow">→</span>
-          </a>
-          <a href="#contact" class="btn btn-ghost">Get in touch</a>
-        </div>
-      </div>
 
-      <div class="hero-meta">
-        <div class="hero-meta-item">
-          <span>Location</span>
-          <span>Austin, TX</span>
-        </div>
-        <div class="hero-meta-item">
-          <span>Currently</span>
-          <span>iCode — Technology Associate</span>
-        </div>
-        <div class="hero-meta-item">
-          <span>Year</span>
-          <span>2026</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="experience">
-      <div class="section-header scroll-fade-in">
-        <div>
-          <div class="section-label">01 — Experience</div>
-          <h2 class="section-title">
-            A track record of <em>building</em> and leading.
-          </h2>
-        </div>
-        <p class="section-intro">
-          Spanning software engineering, education, and early-stage product —
-          here are the roles that shaped how I build today.
-        </p>
-      </div>
-
-      <div class="timeline-container">
-        <div class="timeline">
-          <div class="timeline-item scroll-slide-up scroll-stagger-1">
-            <div class="timeline-date">Nov 2025 — Present</div>
-            <div class="timeline-content">
-              <h3>Technology Associate</h3>
-              <h4>iCode School Franchise · Austin, TX</h4>
-              <ul>
-                <li>Support IT operations, data management, and STEM instruction for a fast-paced technology education center.</li>
-                <li>Maintain and document internal systems, tools, and integrations.</li>
-                <li>Provide technical support for software, hardware, and classroom technology.</li>
-                <li>Support data reporting and analytics to guide operational decisions.</li>
-                <li>Perform QA testing on platforms and data flows to ensure reliability.</li>
-                <li>Teach iCode Belt Program courses in coding, game development, and engineering.</li>
-                <li>Represent iCode at community events and assist with curriculum improvements.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item scroll-slide-up scroll-stagger-2">
-            <div class="timeline-date">Aug 2024 — Nov 2025</div>
-            <div class="timeline-content">
-              <h3>Campus Director</h3>
-              <h4>iCode School Franchise · Austin, TX</h4>
-              <ul>
-                <li>Led enrollment growth, community partnerships, and instructional excellence for a STEM education center serving K-12 students.</li>
-                <li>Drove enrollment growth through marketing funnels (email, social, community outreach), resulting in a 30% increase in net new students.</li>
-                <li>Expanded school partnerships and secured MOUs with three campuses, bringing after-school STEM programs to 100+ students.</li>
-                <li>Supervised and developed a cross-functional team of instructors and operational staff to ensure exceptional educational outcomes.</li>
-                <li>Collaborated across marketing, curriculum, and operations to improve enrollment processes, lead nurturing, and student experience.</li>
-                <li>Represented iCode at community and district events to strengthen brand awareness and build long-term relationships.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item scroll-slide-up scroll-stagger-3">
-            <div class="timeline-date">May 2023 — Aug 2024</div>
-            <div class="timeline-content">
-              <h3>Assistant Campus Director</h3>
-              <h4>iCode School Franchise · Austin, TX</h4>
-              <ul>
-                <li>Led and closed instructional trial classes tailored to each student's interests and skill level, driving enrollments and revenue goals.</li>
-                <li>Managed daily office operations, instructor scheduling, and parent communications to ensure seamless center performance.</li>
-                <li>Collaborated with the Director and instructional team to improve program placement, student experience, and retention outcomes.</li>
-                <li>Served as primary point of contact for families, providing guidance on curriculum pathways, scheduling, and center policies.</li>
-                <li>Supported marketing and community outreach efforts to increase visibility and demand for STEM programs.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item scroll-slide-up scroll-stagger-4">
-            <div class="timeline-date">Jan 2023 — Feb 2024</div>
-            <div class="timeline-content">
-              <h3>Co-Founder · Developer</h3>
-              <h4>Lafellus · Tempe, AZ</h4>
-              <ul>
-                <li>Co-founded Lafellus, an early-stage venture focused on developing an AI-powered plagiarism detection platform for academic and professional content integrity.</li>
-                <li>Helped define product requirements and model approach for an AI plagiarism detection engine aimed at improving originality verification.</li>
-                <li>Secured early-stage funding through ASU Venture Devils, supporting initial research, prototyping, and brand development.</li>
-                <li>Designed and developed the Lafellus marketing website to articulate value proposition, capture early interest, and support investor conversations.</li>
-                <li>Conducted competitive research on plagiarism and content-scoring tools to inform product positioning and feature roadmap.</li>
-                <li>Collaborated with cofounders on go-to-market strategy, pitch materials, and customer discovery interviews within academic communities.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="projects">
-      <div class="section-header scroll-fade-in">
-        <div>
-          <div class="section-label">02 — Projects</div>
-          <h2 class="section-title">
-            Selected work, <em>built</em> from scratch.
-          </h2>
-        </div>
-        <p class="section-intro">
-          A collection of projects spanning mobile apps, social platforms,
-          image processing, and personal finance tools.
-        </p>
-      </div>
-
-      <div class="projects-grid">
-        <article class="project-card scroll-slide-up scroll-stagger-1">
-          <a href="https://github.com/ericacosta505/icarus-mobile" class="project-image-wrap">
-            <span class="project-number">01</span>
-            <img src="assets/icarus-preview.jpeg" alt="Icarus mobile app preview" class="project-image" />
-          </a>
-          <div class="project-content">
-            <div class="project-heading-row">
-              <h3 class="project-title">Icarus<span class="serif-em">.</span></h3>
-              <span class="project-year">2024</span>
-            </div>
-            <p class="project-description">
-              A mobile app that makes tracking daily protein intake effortless.
-              Log meals and watch a dynamic visual chart update in real time —
-              turning dietary goals into simple, actionable progress.
-            </p>
-            <div class="project-links">
-              <a href="https://github.com/ericacosta505/icarus-mobile" class="project-link">
-                GitHub <span class="arrow">↗</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card scroll-slide-up scroll-stagger-2">
-          <a href="https://github.com/Campbell3377/SocialMedia" class="project-image-wrap">
-            <span class="project-number">02</span>
-            <img src="assets/albumatic-preview.jpeg" alt="Albumatic social platform preview" class="project-image" />
-          </a>
-          <div class="project-content">
-            <div class="project-heading-row">
-              <h3 class="project-title">Albumatic<span class="serif-em">.</span></h3>
-              <span class="project-year">2023</span>
-            </div>
-            <p class="project-description">
-              A social platform built on a robust relational architecture —
-              registration, profiles, photo sharing, albums, comments, user
-              tagging, and a personalized "For You" recommendation system.
-            </p>
-            <div class="project-links">
-              <a href="https://github.com/Campbell3377/SocialMedia" class="project-link">
-                GitHub <span class="arrow">↗</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card scroll-slide-up scroll-stagger-3">
-          <a href="https://dither-it.onrender.com" class="project-image-wrap">
-            <span class="project-number">03</span>
-            <img src="assets/dither-preview.jpeg" alt="Dither-it preview" class="project-image" />
-          </a>
-          <div class="project-content">
-            <div class="project-heading-row">
-              <h3 class="project-title">Dither-it<span class="serif-em">.</span></h3>
-              <span class="project-year">2023</span>
-            </div>
-            <p class="project-description">
-              An interactive playground for comparing dithering algorithms
-              across images — exploring how each technique alters quality,
-              color, and aesthetic. Equal parts research tool and digital art.
-            </p>
-            <div class="project-links">
-              <a href="https://github.com/ericacosta505/dither-it" class="project-link">
-                GitHub <span class="arrow">↗</span>
-              </a>
-              <a href="https://dither-it.onrender.com" class="project-link">
-                Live <span class="arrow">↗</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card scroll-slide-up scroll-stagger-4">
-          <a href="https://budget-3a0l.onrender.com" class="project-image-wrap">
-            <span class="project-number">04</span>
-            <img
-              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=550&fit=crop&crop=center"
-              alt="Budget Tracker preview"
-              class="project-image"
-            />
-          </a>
-          <div class="project-content">
-            <div class="project-heading-row">
-              <h3 class="project-title">Budget Tracker<span class="serif-em">.</span></h3>
-              <span class="project-year">2025</span>
-            </div>
-            <p class="project-description">
-              A full-stack personal finance app built on the 50/30/20 rule.
-              Track income and expenses, visualize spending, and stay on
-              target — with authentication, live summaries, and a responsive
-              interface.
-            </p>
-            <div class="project-links">
-              <a href="https://github.com/ericacosta505/Budget" class="project-link">
-                GitHub <span class="arrow">↗</span>
-              </a>
-              <a href="https://budget-3a0l.onrender.com" class="project-link">
-                Live <span class="arrow">↗</span>
-              </a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="skills" class="skills">
-      <div class="section-header scroll-fade-in">
-        <div>
-          <div class="section-label">03 — Skills</div>
-          <h2 class="section-title">
-            Tools of the <em>trade</em>.
-          </h2>
-        </div>
-        <p class="section-intro">
-          The languages, frameworks, and platforms I reach for to build
-          everything from quick prototypes to production systems.
-        </p>
-      </div>
-
-      <div class="skills-grid">
-        <div class="skill-category scroll-slide-up scroll-stagger-1">
-          <h3>Frontend</h3>
-          <ul class="skill-list">
-            <li class="skill-item">HTML5</li>
-            <li class="skill-item">CSS3</li>
-            <li class="skill-item">JavaScript</li>
-            <li class="skill-item">TypeScript</li>
-            <li class="skill-item">React</li>
-            <li class="skill-item">React Native</li>
-            <li class="skill-item">Tailwind CSS</li>
-          </ul>
-        </div>
-
-        <div class="skill-category scroll-slide-up scroll-stagger-2">
-          <h3>Backend</h3>
-          <ul class="skill-list">
-            <li class="skill-item">Node.js</li>
-            <li class="skill-item">Express.js</li>
-            <li class="skill-item">Python</li>
-            <li class="skill-item">Flask</li>
-            <li class="skill-item">Java</li>
-            <li class="skill-item">REST APIs</li>
-            <li class="skill-item">JWT</li>
-          </ul>
-        </div>
-
-        <div class="skill-category scroll-slide-up scroll-stagger-3">
-          <h3>Database & DevOps</h3>
-          <ul class="skill-list">
-            <li class="skill-item">MongoDB</li>
-            <li class="skill-item">PostgreSQL</li>
-            <li class="skill-item">SQL</li>
-            <li class="skill-item">Docker</li>
-            <li class="skill-item">AWS</li>
-            <li class="skill-item">Git</li>
-          </ul>
-        </div>
-
-        <div class="skill-category scroll-slide-up scroll-stagger-4">
-          <h3>Tooling</h3>
-          <ul class="skill-list">
-            <li class="skill-item">GitHub</li>
-            <li class="skill-item">Postman</li>
-            <li class="skill-item">npm</li>
-            <li class="skill-item">React Router</li>
-            <li class="skill-item">Axios</li>
-            <li class="skill-item">Chart.js</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="education" class="education">
-      <div class="section-header scroll-fade-in">
-        <div>
-          <div class="section-label">04 — Education</div>
-          <h2 class="section-title">
-            Formal <em>foundations</em>.
-          </h2>
-        </div>
-        <p class="section-intro">
-          Where computer science stopped being a hobby and started becoming a
-          discipline.
-        </p>
-      </div>
-
-      <div class="timeline-container">
-        <div class="timeline">
-          <div class="timeline-item scroll-slide-up">
-            <div class="timeline-date">2019 — 2023</div>
-            <div class="timeline-content">
-              <h3>B.S. Computer Science</h3>
-              <h4>Arizona State University · Tempe, AZ</h4>
-              <ul>
-                <li>Graduated with a 3.4 / 4.0 GPA.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <div class="contact-wrap">
-        <div class="contact-intro scroll-slide-up">
-          <div class="section-label" style="margin-bottom: 1.25rem">05 — Contact</div>
-          <h2>Let's build something <em>together</em>.</h2>
+        <div class="hero-footer reveal">
           <p>
-            Whether you've got a role, a project, or just want to swap notes on
-            something interesting — my inbox is open. I'll get back to you
-            within a day or two.
+            I’m Eric Acosta, a Senior Software Engineer at FoundryZero. I turn
+            early product ideas into designed, engineered, and operated software.
           </p>
-          <div class="contact-direct">
-            <a href="mailto:acosta.eric505@icloud.com" class="contact-link">
-              <i class="far fa-envelope"></i> acosta.eric505@icloud.com
-            </a>
-            <a href="https://www.linkedin.com/in/eric-acosta505/" class="contact-link">
-              <i class="fab fa-linkedin-in"></i> linkedin.com/in/eric-acosta505
-            </a>
-            <a href="https://github.com/ericacosta505" class="contact-link">
-              <i class="fab fa-github"></i> github.com/ericacosta505
-            </a>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#work">See selected work <span>↘</span></a>
+            <a class="text-link" href="https://www.linkedin.com/in/eric-acosta505/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
           </div>
         </div>
 
-        <form class="contact-form scroll-slide-up scroll-stagger-2" id="contact-form">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+        <aside class="now-building reveal" aria-label="Current product status">
+          <div class="now-heading">
+            <span>NOW BUILDING</span>
+            <span class="live-indicator"><i aria-hidden="true"></i>LIVE</span>
           </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+          <a href="https://foundryzero.io/mosaic.html" target="_blank" rel="noreferrer">
+            <strong>MOSAIC</strong>
+            <span>A health companion that connects the whole picture.</span>
+            <b aria-hidden="true">↗</b>
+          </a>
+          <div class="now-platforms">
+            <span>IOS</span>
+            <span>ANDROID</span>
+            <span>FOUNDRYZERO / 01</span>
           </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell me a bit about what you're working on…" required></textarea>
-          </div>
-          <button type="submit" class="submit-btn">
-            Send message <span class="arrow">→</span>
-          </button>
-          <div id="form-response"></div>
-        </form>
-      </div>
-    </section>
+        </aside>
+      </section>
 
-    <footer>
-      <div class="footer-left">
-        © 2026 Eric Acosta — Crafted with care in Austin, TX
+      <section class="work-section" id="work" aria-labelledby="work-title">
+        <header class="section-header reveal">
+          <div>
+            <span>01</span>
+            <p>SELECTED WORK</p>
+          </div>
+          <h2 id="work-title">Built all the way through.</h2>
+          <p>Two current examples of how I move between product thinking, interface, engineering, and launch.</p>
+        </header>
+
+        <article class="project project-mosaic reveal">
+          <div class="project-copy">
+            <div class="project-label">
+              <span>01 / MOBILE PRODUCT</span>
+              <span class="project-state"><i aria-hidden="true"></i>LIVE</span>
+            </div>
+            <div>
+              <p class="project-studio">FOUNDRYZERO VENTURE 001</p>
+              <h3>Mosaic<span>.</span></h3>
+              <p class="project-lede">
+                One calm place for meals, workouts, wearables, progress, and a
+                coach that understands the context behind the numbers.
+              </p>
+            </div>
+            <p class="project-role">
+              My work on the product spans the React Native client, backend
+              services, data systems, AI features, subscriptions, observability,
+              and store releases.
+            </p>
+            <div class="store-links" aria-label="Download Mosaic">
+              <a href="https://apps.apple.com/us/app/mosaic-snap-track-coach/id6754205341" target="_blank" rel="noreferrer" aria-label="Download Mosaic on the App Store">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.1 12.5c0-2.8 2.3-4.1 2.4-4.2a5.2 5.2 0 0 0-4.1-2.2c-1.7-.2-3.4 1-4.3 1-.9 0-2.2-1-3.6-1-1.8 0-3.5 1.1-4.5 2.7-2 3.4-.5 8.5 1.4 11.2.9 1.3 2 2.8 3.5 2.7 1.4-.1 1.9-.9 3.6-.9s2.2.9 3.7.9c1.5 0 2.5-1.3 3.4-2.7a12 12 0 0 0 1.6-3.3 4.8 4.8 0 0 1-2.9-4.4l-.2.2ZM14.3 4.3A4.8 4.8 0 0 0 15.4.8a5 5 0 0 0-3.2 1.7 4.5 4.5 0 0 0-1.1 3.3 4.1 4.1 0 0 0 3.2-1.5Z" /></svg>
+                <span><small>Download on the</small><b>App Store</b></span>
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.myfitnessguide.app" target="_blank" rel="noreferrer" aria-label="Download Mosaic on Google Play">
+                <svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 2 12.5 10L3 22V2Z" /><path d="m15.5 12 3.8-3.1c1-.8 2.3 0 2.3 1.2v3.8c0 1.2-1.3 2-2.3 1.2L15.5 12Z" /></svg>
+                <span><small>Get it on</small><b>Google Play</b></span>
+              </a>
+            </div>
+            <a class="project-link" href="https://foundryzero.io/mosaic.html" target="_blank" rel="noreferrer">Explore Mosaic <span>↗</span></a>
+          </div>
+
+          <div class="mosaic-visual" aria-label="Mosaic app preview">
+            <div class="visual-grid" aria-hidden="true"></div>
+            <p class="visual-note visual-note-top">DAILY HEALTH / 01</p>
+            <div class="mosaic-shot">
+              <img
+                src="assets/mosaic-daily-health.png"
+                width="1290"
+                height="2796"
+                alt="Mosaic daily health screen showing health score, calories, macronutrients, and hydration"
+              />
+            </div>
+            <p class="visual-note visual-note-bottom">SNAP / TRACK / COACH</p>
+          </div>
+        </article>
+
+        <article class="project project-foundry reveal">
+          <div class="foundry-visual">
+            <div class="browser-bar" aria-hidden="true">
+              <span><i></i><i></i><i></i></span>
+              <p>foundryzero.io</p>
+              <b>↗</b>
+            </div>
+            <img
+              src="assets/foundryzero-website.png"
+              width="1200"
+              height="630"
+              loading="lazy"
+              decoding="async"
+              alt="FoundryZero venture studio website preview"
+            />
+          </div>
+
+          <div class="project-copy">
+            <div class="project-label">
+              <span>02 / WEBSITE + BRAND SYSTEM</span>
+              <span>2026</span>
+            </div>
+            <div>
+              <p class="project-studio">VENTURE STUDIO / AUSTIN</p>
+              <h3>FoundryZero<span>.</span></h3>
+              <p class="project-lede">
+                A digital home for a studio that originates, prototypes, and
+                operates the software products it wishes existed.
+              </p>
+            </div>
+            <p class="project-role">
+              I created the FoundryZero website from the ground up—shaping the
+              studio’s web identity, information architecture, venture pages,
+              responsive system, and production launch.
+            </p>
+            <ul class="project-tags" aria-label="FoundryZero website disciplines">
+              <li>WEB DESIGN</li>
+              <li>FRONT-END</li>
+              <li>CONTENT SYSTEM</li>
+              <li>DEPLOYMENT</li>
+            </ul>
+            <a class="project-link" href="https://foundryzero.io/" target="_blank" rel="noreferrer">Visit FoundryZero <span>↗</span></a>
+          </div>
+        </article>
+      </section>
+
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <header class="section-header section-header-light reveal">
+          <div>
+            <span>02</span>
+            <p>ABOUT</p>
+          </div>
+          <h2 id="about-title">I stay close to the whole product.</h2>
+        </header>
+
+        <div class="about-layout">
+          <p class="about-statement reveal">
+            ENGINEERING IS PART OF THE PRODUCT CONVERSATION—<span>NOT A HANDOFF AT THE END.</span>
+          </p>
+          <div class="about-copy reveal">
+            <p>
+              I’m a software engineer based in Austin. I work as a Senior
+              Software Engineer at FoundryZero, a venture studio that originates,
+              prototypes, and operates software products.
+            </p>
+            <p>
+              My work spans product definition, mobile and web applications,
+              APIs, data systems, cloud infrastructure, release engineering,
+              and the operational work that follows launch. I created
+              FoundryZero’s website and led Mosaic from an early product thesis
+              to a live iOS and Android app.
+            </p>
+            <p>
+              Before FoundryZero, I spent three years at iCode Austin, moving
+              from computer science instructor into campus and technology
+              leadership. Earlier, I helped build Lafellus, an AI plagiarism
+              detection startup supported through ASU Venture Devils. I earned
+              my B.S. in Computer Science from Arizona State University.
+            </p>
+            <p>
+              I’m most interested in 0→1 products, small teams, and hard
+              problems where technical judgment and product judgment belong in
+              the same room.
+            </p>
+          </div>
+        </div>
+
+        <div class="stack-list reveal" aria-label="Technical focus">
+          <span>PRODUCT DEFINITION</span>
+          <span>REACT NATIVE / EXPO</span>
+          <span>NODE / EXPRESS</span>
+          <span>SUPABASE / POSTGRES</span>
+          <span>RAILWAY</span>
+          <span>APPLIED AI</span>
+        </div>
+      </section>
+
+      <section class="history-section" id="history" aria-labelledby="history-title">
+        <header class="section-header reveal">
+          <div>
+            <span>03</span>
+            <p>HISTORY</p>
+          </div>
+          <h2 id="history-title">The useful path here.</h2>
+          <p>Software, early ventures, education, operations, and team leadership all inform how I build now.</p>
+        </header>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <p>NOW</p>
+            <div>
+              <span>FOUNDRYZERO</span>
+              <h3>Senior Software Engineer</h3>
+            </div>
+            <p>Building product systems across the studio’s ventures, including Mosaic.</p>
+            <span class="timeline-mark"><i></i></span>
+          </article>
+          <article class="timeline-item reveal">
+            <p>2023—2026</p>
+            <div>
+              <span>ICODE AUSTIN</span>
+              <h3>Technology &amp; Campus Leadership</h3>
+            </div>
+            <p>Progressed from software instruction to campus director and technology operations.</p>
+            <span class="timeline-mark"><i></i></span>
+          </article>
+          <article class="timeline-item reveal">
+            <p>2023—2024</p>
+            <div>
+              <span>LAFELLUS</span>
+              <h3>Developer &amp; Product Contributor</h3>
+            </div>
+            <p>Helped shape an AI plagiarism detection product, website, roadmap, and early go-to-market.</p>
+            <span class="timeline-mark"><i></i></span>
+          </article>
+          <article class="timeline-item reveal">
+            <p>2019—2023</p>
+            <div>
+              <span>ARIZONA STATE UNIVERSITY</span>
+              <h3>B.S. Computer Science</h3>
+            </div>
+            <p>Ira A. Fulton Schools of Engineering.</p>
+            <span class="timeline-mark"><i></i></span>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-index reveal">
+          <span>04 / CONTACT</span>
+          <span>AUSTIN, TEXAS</span>
+        </div>
+        <h2 id="contact-title" class="reveal">Have a hard problem<br />and a small team?</h2>
+        <div class="contact-footer reveal">
+          <p>Let’s compare notes—or build something useful.</p>
+          <a href="mailto:acosta.eric505@icloud.com">acosta.eric505@icloud.com <span>↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a href="#top">ERIC ACOSTA <span>↑</span></a>
+      <p>SENIOR SOFTWARE ENGINEER</p>
+      <div>
+        <a href="https://github.com/ericacosta505" target="_blank" rel="noreferrer">GITHUB ↗</a>
+        <a href="https://www.linkedin.com/in/eric-acosta505/" target="_blank" rel="noreferrer">LINKEDIN ↗</a>
       </div>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/eric-acosta505/" class="social-link" aria-label="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://github.com/ericacosta505" class="social-link" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="mailto:acosta.eric505@icloud.com" class="social-link" aria-label="Email">
-          <i class="far fa-envelope"></i>
-        </a>
-      </div>
+      <p>© <span id="year">2026</span></p>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
