@@ -5,316 +5,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Eric Acosta is a Senior Software Engineer building products at FoundryZero, including Mosaic for iOS and Android."
+      content="Eric Acosta is an Austin-based software engineer building thoughtful digital products."
     />
-    <meta name="theme-color" content="#f4f4ef" />
-    <title>Eric Acosta — Senior Software Engineer</title>
-
+    <meta property="og:title" content="Eric Acosta — Software Engineer" />
+    <meta
+      property="og:description"
+      content="Thoughtful products, friendly interfaces, and reliable systems."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ericacosta.dev/" />
+    <meta property="og:site_name" content="Eric Acosta" />
+    <meta property="og:image" content="https://ericacosta.dev/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Eric Acosta portfolio with an architectural pavilion illustration" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://ericacosta.dev/og.png" />
+    <meta name="theme-color" content="#e7e2d8" />
+    <title>Eric Acosta — Software Engineer</title>
+    <link rel="canonical" href="https://ericacosta.dev/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&amp;family=Geist:wght@100..900&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="/index.css?v=20260820" />
   </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <div class="page-progress" aria-hidden="true"><i></i></div>
-
+  <body class="page-home">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
-      <a class="wordmark" href="#top" aria-label="Eric Acosta, home">
-        <span>ERIC ACOSTA</span>
-        <i aria-hidden="true"></i>
+      <a class="site-brand page-link" href="/" aria-label="Eric Acosta, home">
+        <span>ERIC ACOSTA</span><i>Software + Product</i>
       </a>
-
-      <div class="header-status" aria-label="Current location and time">
-        <span class="status-dot" aria-hidden="true"></span>
-        <span>AUSTIN</span>
-        <time id="austin-time">--:-- CT</time>
-      </div>
-
-      <button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation">
-        <span>MENU</span>
-        <i aria-hidden="true"></i>
-      </button>
-
-      <nav class="navigation" id="navigation" aria-label="Main navigation">
-        <a href="#work"><span>01</span>Work</a>
-        <a href="#about"><span>02</span>About</a>
-        <a href="#history"><span>03</span>History</a>
-        <a href="#contact"><span>04</span>Contact</a>
+      <span class="page-name">Index / 01</span>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="page-link" href="/" aria-current="page">Home</a>
+        <a class="page-link" href="/work.html">Work</a>
+        <a class="page-link" href="/about.html">About</a>
+        <a class="page-link" href="/contact.html">Contact</a>
       </nav>
     </header>
 
-    <main id="main">
-      <section class="hero" id="top">
-        <div class="hero-eyebrow reveal">
-          <span>SENIOR SOFTWARE ENGINEER</span>
-          <span>PORTFOLIO / 2026</span>
-        </div>
-
-        <h1 aria-label="I build products from zero to live">
-          <span class="reveal">I build products</span>
-          <span class="reveal">from zero to <em>live.</em></span>
-        </h1>
-
-        <div class="hero-footer reveal">
-          <p>
-            I’m Eric Acosta, a Senior Software Engineer at FoundryZero. I turn
-            early product ideas into designed, engineered, and operated software.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-dark" href="#work">See selected work <span>↘</span></a>
-            <a class="text-link" href="https://www.linkedin.com/in/eric-acosta505/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-          </div>
-        </div>
-
-        <aside class="now-building reveal" aria-label="Current product status">
-          <div class="now-heading">
-            <span>NOW BUILDING</span>
-            <span class="live-indicator"><i aria-hidden="true"></i>LIVE</span>
-          </div>
-          <a href="https://foundryzero.io/mosaic.html" target="_blank" rel="noreferrer">
-            <strong>MOSAIC</strong>
-            <span>A health companion that connects the whole picture.</span>
-            <b aria-hidden="true">↗</b>
-          </a>
-          <div class="now-platforms">
-            <span>IOS</span>
-            <span>ANDROID</span>
-            <span>FOUNDRYZERO / 01</span>
-          </div>
-        </aside>
-      </section>
-
-      <section class="work-section" id="work" aria-labelledby="work-title">
-        <header class="section-header reveal">
-          <div>
-            <span>01</span>
-            <p>SELECTED WORK</p>
-          </div>
-          <h2 id="work-title">Built all the way through.</h2>
-          <p>Two current examples of how I move between product thinking, interface, engineering, and launch.</p>
-        </header>
-
-        <article class="project project-mosaic reveal">
-          <div class="project-copy">
-            <div class="project-label">
-              <span>01 / MOBILE PRODUCT</span>
-              <span class="project-state"><i aria-hidden="true"></i>LIVE</span>
-            </div>
-            <div>
-              <p class="project-studio">FOUNDRYZERO VENTURE 001</p>
-              <h3>Mosaic<span>.</span></h3>
-              <p class="project-lede">
-                One calm place for meals, workouts, wearables, progress, and a
-                coach that understands the context behind the numbers.
-              </p>
-            </div>
-            <p class="project-role">
-              My work on the product spans the React Native client, backend
-              services, data systems, AI features, subscriptions, observability,
-              and store releases.
-            </p>
-            <div class="store-links" aria-label="Download Mosaic">
-              <a href="https://apps.apple.com/us/app/mosaic-snap-track-coach/id6754205341" target="_blank" rel="noreferrer" aria-label="Download Mosaic on the App Store">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.1 12.5c0-2.8 2.3-4.1 2.4-4.2a5.2 5.2 0 0 0-4.1-2.2c-1.7-.2-3.4 1-4.3 1-.9 0-2.2-1-3.6-1-1.8 0-3.5 1.1-4.5 2.7-2 3.4-.5 8.5 1.4 11.2.9 1.3 2 2.8 3.5 2.7 1.4-.1 1.9-.9 3.6-.9s2.2.9 3.7.9c1.5 0 2.5-1.3 3.4-2.7a12 12 0 0 0 1.6-3.3 4.8 4.8 0 0 1-2.9-4.4l-.2.2ZM14.3 4.3A4.8 4.8 0 0 0 15.4.8a5 5 0 0 0-3.2 1.7 4.5 4.5 0 0 0-1.1 3.3 4.1 4.1 0 0 0 3.2-1.5Z" /></svg>
-                <span><small>Download on the</small><b>App Store</b></span>
-              </a>
-              <a href="https://play.google.com/store/apps/details?id=com.myfitnessguide.app" target="_blank" rel="noreferrer" aria-label="Download Mosaic on Google Play">
-                <svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 2 12.5 10L3 22V2Z" /><path d="m15.5 12 3.8-3.1c1-.8 2.3 0 2.3 1.2v3.8c0 1.2-1.3 2-2.3 1.2L15.5 12Z" /></svg>
-                <span><small>Get it on</small><b>Google Play</b></span>
-              </a>
-            </div>
-            <a class="project-link" href="https://foundryzero.io/mosaic.html" target="_blank" rel="noreferrer">Explore Mosaic <span>↗</span></a>
-          </div>
-
-          <div class="mosaic-visual" aria-label="Mosaic app preview">
-            <div class="visual-grid" aria-hidden="true"></div>
-            <p class="visual-note visual-note-top">DAILY HEALTH / 01</p>
-            <div class="mosaic-shot">
-              <img
-                src="assets/mosaic-daily-health.png"
-                width="1290"
-                height="2796"
-                alt="Mosaic daily health screen showing health score, calories, macronutrients, and hydration"
-              />
-            </div>
-            <p class="visual-note visual-note-bottom">SNAP / TRACK / COACH</p>
-          </div>
-        </article>
-
-        <article class="project project-foundry reveal">
-          <div class="foundry-visual">
-            <div class="browser-bar" aria-hidden="true">
-              <span><i></i><i></i><i></i></span>
-              <p>foundryzero.io</p>
-              <b>↗</b>
-            </div>
-            <img
-              src="assets/foundryzero-website.png"
-              width="1200"
-              height="630"
-              loading="lazy"
-              decoding="async"
-              alt="FoundryZero venture studio website preview"
-            />
-          </div>
-
-          <div class="project-copy">
-            <div class="project-label">
-              <span>02 / WEBSITE + BRAND SYSTEM</span>
-              <span>2026</span>
-            </div>
-            <div>
-              <p class="project-studio">VENTURE STUDIO / AUSTIN</p>
-              <h3>FoundryZero<span>.</span></h3>
-              <p class="project-lede">
-                A digital home for a studio that originates, prototypes, and
-                operates the software products it wishes existed.
-              </p>
-            </div>
-            <p class="project-role">
-              I created the FoundryZero website from the ground up—shaping the
-              studio’s web identity, information architecture, venture pages,
-              responsive system, and production launch.
-            </p>
-            <ul class="project-tags" aria-label="FoundryZero website disciplines">
-              <li>WEB DESIGN</li>
-              <li>FRONT-END</li>
-              <li>CONTENT SYSTEM</li>
-              <li>DEPLOYMENT</li>
-            </ul>
-            <a class="project-link" href="https://foundryzero.io/" target="_blank" rel="noreferrer">Visit FoundryZero <span>↗</span></a>
-          </div>
-        </article>
-      </section>
-
-      <section class="about-section" id="about" aria-labelledby="about-title">
-        <header class="section-header section-header-light reveal">
-          <div>
-            <span>02</span>
-            <p>ABOUT</p>
-          </div>
-          <h2 id="about-title">I stay close to the whole product.</h2>
-        </header>
-
-        <div class="about-layout">
-          <p class="about-statement reveal">
-            ENGINEERING IS PART OF THE PRODUCT CONVERSATION—<span>NOT A HANDOFF AT THE END.</span>
-          </p>
-          <div class="about-copy reveal">
-            <p>
-              I’m a software engineer based in Austin. I work as a Senior
-              Software Engineer at FoundryZero, a venture studio that originates,
-              prototypes, and operates software products.
-            </p>
-            <p>
-              My work spans product definition, mobile and web applications,
-              APIs, data systems, cloud infrastructure, release engineering,
-              and the operational work that follows launch. I created
-              FoundryZero’s website and led Mosaic from an early product thesis
-              to a live iOS and Android app.
-            </p>
-            <p>
-              Before FoundryZero, I spent three years at iCode Austin, moving
-              from computer science instructor into campus and technology
-              leadership. Earlier, I helped build Lafellus, an AI plagiarism
-              detection startup supported through ASU Venture Devils. I earned
-              my B.S. in Computer Science from Arizona State University.
-            </p>
-            <p>
-              I’m most interested in 0→1 products, small teams, and hard
-              problems where technical judgment and product judgment belong in
-              the same room.
-            </p>
-          </div>
-        </div>
-
-        <div class="stack-list reveal" aria-label="Technical focus">
-          <span>PRODUCT DEFINITION</span>
-          <span>REACT NATIVE / EXPO</span>
-          <span>NODE / EXPRESS</span>
-          <span>SUPABASE / POSTGRES</span>
-          <span>RAILWAY</span>
-          <span>APPLIED AI</span>
+    <main class="view home-view" id="main-content" tabindex="-1">
+      <section class="home-copy" aria-labelledby="home-title">
+        <p class="hello-line">Software engineer / Austin, Texas</p>
+        <h1 id="home-title"><span>Eric</span><span>Acosta</span></h1>
+        <p class="home-intro">
+          I build digital products that make complex ideas feel obvious.
+        </p>
+        <div class="home-links">
+          <a class="soft-link page-link" href="/work.html">Selected work <span>↗</span></a>
+          <a class="soft-link page-link" href="/about.html">More about me <span>↗</span></a>
         </div>
       </section>
 
-      <section class="history-section" id="history" aria-labelledby="history-title">
-        <header class="section-header reveal">
-          <div>
-            <span>03</span>
-            <p>HISTORY</p>
+      <section class="home-art" aria-label="Architectural illustration of a modernist pavilion">
+        <div class="architectural-art">
+          <svg viewBox="0 0 640 620" role="img" aria-labelledby="art-title art-description">
+            <title id="art-title">Courtyard study</title>
+            <desc id="art-description">An axonometric modernist pavilion beside a blue reflecting pool and an orange sun.</desc>
+
+            <g class="art-guides" aria-hidden="true">
+              <path d="M42 522 330 366 615 518" />
+              <path d="M56 555 330 406 597 548" />
+              <path d="M105 585 367 443 572 552" />
+              <path d="M135 118 578 352" />
+              <path d="M135 151 553 371" />
+            </g>
+
+            <circle class="art-sun" cx="462" cy="154" r="92" />
+
+            <polygon class="art-ground" points="70,455 320,320 574,455 326,592" />
+            <polygon class="art-ground-shadow" points="163,417 348,319 508,404 324,505" />
+
+            <g class="art-pavilion">
+              <polygon class="art-roof" points="132,174 354,291 400,266 177,149" />
+              <polygon class="art-wall" points="132,174 354,291 354,485 132,368" />
+              <polygon class="art-side" points="354,291 400,266 400,459 354,485" />
+
+              <path class="art-portal" d="M205 407V292c0-38 27-52 59-35 32 17 58 60 58 98v113Z" />
+              <path class="art-wall-line" d="M158 215 330 306M158 248l172 91M158 281l172 91" />
+
+              <polygon class="art-canopy" points="337,335 519,431 519,463 337,367" />
+              <path class="art-column" d="M374 389v102M487 449v102" />
+            </g>
+
+            <g class="art-stairs">
+              <polygon points="391,487 502,546 475,561 364,502" />
+              <polygon points="374,504 475,558 448,573 347,519" />
+              <polygon points="357,521 448,570 421,585 330,536" />
+            </g>
+
+            <polygon class="art-pool" points="208,488 330,422 472,497 350,564" />
+            <path class="art-pool-line" d="m225 500 122-65M251 514l121-65M278 529l121-65M304 543l121-65" />
+
+          </svg>
+
+          <div class="art-plaque">
+            <span>Courtyard study / 01</span>
+            <b>Form follows curiosity.</b>
           </div>
-          <h2 id="history-title">The useful path here.</h2>
-          <p>Software, early ventures, education, operations, and team leadership all inform how I build now.</p>
-        </header>
-
-        <div class="timeline">
-          <article class="timeline-item reveal">
-            <p>NOW</p>
-            <div>
-              <span>FOUNDRYZERO</span>
-              <h3>Senior Software Engineer</h3>
-            </div>
-            <p>Building product systems across the studio’s ventures, including Mosaic.</p>
-            <span class="timeline-mark"><i></i></span>
-          </article>
-          <article class="timeline-item reveal">
-            <p>2023—2026</p>
-            <div>
-              <span>ICODE AUSTIN</span>
-              <h3>Technology &amp; Campus Leadership</h3>
-            </div>
-            <p>Progressed from software instruction to campus director and technology operations.</p>
-            <span class="timeline-mark"><i></i></span>
-          </article>
-          <article class="timeline-item reveal">
-            <p>2023—2024</p>
-            <div>
-              <span>LAFELLUS</span>
-              <h3>Developer &amp; Product Contributor</h3>
-            </div>
-            <p>Helped shape an AI plagiarism detection product, website, roadmap, and early go-to-market.</p>
-            <span class="timeline-mark"><i></i></span>
-          </article>
-          <article class="timeline-item reveal">
-            <p>2019—2023</p>
-            <div>
-              <span>ARIZONA STATE UNIVERSITY</span>
-              <h3>B.S. Computer Science</h3>
-            </div>
-            <p>Ira A. Fulton Schools of Engineering.</p>
-            <span class="timeline-mark"><i></i></span>
-          </article>
-        </div>
-      </section>
-
-      <section class="contact-section" id="contact" aria-labelledby="contact-title">
-        <div class="contact-index reveal">
-          <span>04 / CONTACT</span>
-          <span>AUSTIN, TEXAS</span>
-        </div>
-        <h2 id="contact-title" class="reveal">Have a hard problem<br />and a small team?</h2>
-        <div class="contact-footer reveal">
-          <p>Let’s compare notes—or build something useful.</p>
-          <a href="mailto:acosta.eric505@icloud.com">acosta.eric505@icloud.com <span>↗</span></a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <a href="#top">ERIC ACOSTA <span>↑</span></a>
-      <p>SENIOR SOFTWARE ENGINEER</p>
-      <div>
-        <a href="https://github.com/ericacosta505" target="_blank" rel="noreferrer">GITHUB ↗</a>
-        <a href="https://www.linkedin.com/in/eric-acosta505/" target="_blank" rel="noreferrer">LINKEDIN ↗</a>
-      </div>
-      <p>© <span id="year">2026</span></p>
+      <span>Austin / Texas</span>
+      <span class="footer-center">Design · Code · Product</span>
+      <span class="page-count"><b>01</b> / 04</span>
     </footer>
-
-    <script src="script.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Eric Acosta",
+        "url": "https://ericacosta.dev/",
+        "jobTitle": "Software Engineer",
+        "email": "mailto:acosta.eric505@icloud.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Austin",
+          "addressRegion": "TX",
+          "addressCountry": "US"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Arizona State University"
+        },
+        "sameAs": [
+          "https://github.com/ericacosta505",
+          "https://www.linkedin.com/in/eric-acosta505/"
+        ]
+      }
+    </script>
+    <script src="/script.js?v=20260820"></script>
   </body>
 </html>

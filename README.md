@@ -1,31 +1,27 @@
-# Portfolio
+# Eric Acosta — Portfolio
 
-Welcome to my portfolio website! This repository contains the source code for my personal portfolio, showcasing my projects, skills, and professional journey.
+An editorial, interaction-led portfolio for software engineer Eric Acosta, built with raw HTML, CSS, and JavaScript.
 
-## Live Website
-Check out the live version of my portfolio at: [ericacosta.dev](https://ericacosta.dev)
+## Highlights
 
-## Features
-- **Responsive Design:** Optimized for viewing on all devices, including desktops, tablets, and smartphones
-- **Project Showcase:** Detailed descriptions of my projects with links to github repositories and source code
-- **Skills Section:** Highlights of my technical skills and areas of expertise
-- **About Me:** A brief overview of my professional background and interests
-- **Contact Form:** A functional contact form to reach out to me directly
+- Separate full-screen Home, Work, About, and Contact pages
+- Interactive selected-work preview with keyboard controls
+- Custom architectural SVG artwork and fast page transitions
+- Warm modernist palette with condensed poster typography
+- Desktop layouts that stay within the viewport
+- Responsive touch and reduced-motion behavior
 
-## Technologies Used
+## Stack
 
-### Frontend
-- HTML5
-- CSS3
+- HTML
+- CSS
 - JavaScript
+- A minimal Express static server
 
-### Backend
-- Node.js
-- Express.js
-- Nodemailer
+## Development
 
-### Hosting
-- Render.com
+```bash
+npm run dev
+```
 
-## Contact
-Feel free to reach out to me through the contact form on my portfolio website or connect with me on [LinkedIn](https://www.linkedin.com/in/eric-acosta505/).
+There is no framework or build step. The files in `public/` are served directly.

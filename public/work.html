@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Selected software projects by Austin-based engineer Eric Acosta."
+    />
+    <title>Work — Eric Acosta</title>
+    <meta name="theme-color" content="#d9d5ca" />
+    <meta property="og:title" content="Selected Work — Eric Acosta" />
+    <meta property="og:description" content="Selected mobile, social, creative, and full-stack projects by Eric Acosta." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ericacosta.dev/work.html" />
+    <meta property="og:site_name" content="Eric Acosta" />
+    <meta property="og:image" content="https://ericacosta.dev/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Eric Acosta portfolio with an architectural pavilion illustration" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://ericacosta.dev/og.png" />
+    <link rel="canonical" href="https://ericacosta.dev/work.html" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/index.css?v=20260820" />
+  </head>
+  <body class="page-work">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <a class="site-brand page-link" href="/" aria-label="Eric Acosta, home">
+        <span>ERIC ACOSTA</span><i>Software + Product</i>
+      </a>
+      <span class="page-name">Work / 02</span>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="page-link" href="/">Home</a>
+        <a class="page-link" href="/work.html" aria-current="page">Work</a>
+        <a class="page-link" href="/about.html">About</a>
+        <a class="page-link" href="/contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="view work-view" id="main-content" tabindex="-1">
+      <section class="work-stage" aria-label="Active project preview">
+        <article class="project-panel is-active" data-project="0">
+          <img src="/assets/icarus-preview.jpeg" width="473" height="982" decoding="async" alt="Icarus protein tracking mobile application" />
+          <div class="project-caption">
+            <span>Mobile product · 2024</span>
+            <span class="project-status">Repository available</span>
+          </div>
+        </article>
+
+        <article class="project-panel" data-project="1">
+          <img src="/assets/albumatic-preview.jpeg" width="566" height="924" decoding="async" alt="Albumatic music community interface" />
+          <div class="project-caption">
+            <span>Social platform · 2023</span>
+            <span class="project-status">Team build</span>
+          </div>
+        </article>
+
+        <article class="project-panel project-panel--wide" data-project="2">
+          <img src="/assets/dither-preview.jpeg" width="875" height="864" decoding="async" alt="Dither-it image-processing interface" />
+          <div class="project-caption">
+            <span>Creative tool · 2023</span>
+            <span class="project-status">Live demo available</span>
+          </div>
+        </article>
+
+        <article class="project-panel" data-project="3">
+          <div class="budget-poster" role="img" aria-label="Graphic showing the 50, 30, 20 budgeting rule">
+            <span>50</span><span>30</span><span>20</span>
+            <small>needs / wants / future</small>
+          </div>
+          <div class="project-caption">
+            <span>Full-stack app · 2025</span>
+            <span class="project-status">Demo being refreshed</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="work-list" aria-labelledby="work-title">
+        <div class="work-heading">
+          <h1 id="work-title">Selected <em>work</em></h1>
+          <span>Four builds</span>
+        </div>
+        <ol class="project-menu" role="tablist" aria-label="Selected projects">
+          <li role="presentation">
+            <button class="project-button is-active" id="project-tab-0" role="tab" type="button" data-project-button="0" aria-selected="true" aria-controls="project-detail-0" tabindex="0">
+              <span class="project-index">01</span>
+              <span class="project-title">Icarus</span>
+              <span class="project-kind">Mobile</span>
+            </button>
+          </li>
+          <li role="presentation">
+            <button class="project-button" id="project-tab-1" role="tab" type="button" data-project-button="1" aria-selected="false" aria-controls="project-detail-1" tabindex="-1">
+              <span class="project-index">02</span>
+              <span class="project-title">Albumatic</span>
+              <span class="project-kind">Social</span>
+            </button>
+          </li>
+          <li role="presentation">
+            <button class="project-button" id="project-tab-2" role="tab" type="button" data-project-button="2" aria-selected="false" aria-controls="project-detail-2" tabindex="-1">
+              <span class="project-index">03</span>
+              <span class="project-title">Dither-it</span>
+              <span class="project-kind">Creative</span>
+            </button>
+          </li>
+          <li role="presentation">
+            <button class="project-button" id="project-tab-3" role="tab" type="button" data-project-button="3" aria-selected="false" aria-controls="project-detail-3" tabindex="-1">
+              <span class="project-index">04</span>
+              <span class="project-title">Budget</span>
+              <span class="project-kind">Full stack</span>
+            </button>
+          </li>
+        </ol>
+
+        <div class="project-detail-stack" aria-live="polite">
+          <article class="project-detail is-active" id="project-detail-0" role="tabpanel" aria-labelledby="project-tab-0" data-project-detail="0">
+            <p>A mobile protein tracker that turns meal entries into a clear view of daily progress.</p>
+            <div class="detail-meta"><span>React Native</span><span>TypeScript</span><span>Node / MongoDB</span></div>
+            <div class="detail-actions"><a href="https://github.com/ericacosta505/icarus-mobile" target="_blank" rel="noopener noreferrer">View source ↗</a></div>
+          </article>
+          <article class="project-detail" id="project-detail-1" role="tabpanel" aria-labelledby="project-tab-1" data-project-detail="1" hidden>
+            <p>A music-first social platform for posting albums, discovering trends, and community ranking.</p>
+            <div class="detail-meta"><span>Vanilla JavaScript</span><span>Node.js</span><span>MySQL</span><span>Team build</span></div>
+            <div class="detail-actions"><a href="https://github.com/Campbell3377/SocialMedia" target="_blank" rel="noopener noreferrer">View team source ↗</a></div>
+          </article>
+          <article class="project-detail" id="project-detail-2" role="tabpanel" aria-labelledby="project-tab-2" data-project-detail="2" hidden>
+            <p>A focused browser tool for applying a dithering effect and comparing the processed image.</p>
+            <div class="detail-meta"><span>Python</span><span>Image processing</span><span>Interactive UI</span></div>
+            <div class="detail-actions"><a href="https://dither-it.onrender.com" target="_blank" rel="noopener noreferrer">Open live ↗</a><a href="https://github.com/ericacosta505/dither-it" target="_blank" rel="noopener noreferrer">Source ↗</a></div>
+          </article>
+          <article class="project-detail" id="project-detail-3" role="tabpanel" aria-labelledby="project-tab-3" data-project-detail="3" hidden>
+            <p>A full-stack budgeting experience organized around the practical 50 / 30 / 20 framework.</p>
+            <div class="detail-meta"><span>Full stack</span><span>Authentication</span><span>Chart.js</span></div>
+            <div class="detail-actions"><span class="detail-unavailable">Demo being refreshed</span></div>
+          </article>
+        </div>
+        <p class="work-help"><span class="desktop-hint">Hover or use arrow keys to browse.</span><span class="mobile-hint">Tap a project to open its preview.</span></p>
+        <noscript>
+          <p class="noscript-projects">JavaScript is off. View <a href="https://github.com/ericacosta505/icarus-mobile">Icarus</a>, <a href="https://github.com/Campbell3377/SocialMedia">Albumatic</a>, or <a href="https://github.com/ericacosta505/dither-it">Dither-it</a> directly.</p>
+        </noscript>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Mobile / Web / Systems</span>
+      <a class="footer-center page-link" href="/about.html">Next / About ↗</a>
+      <span class="page-count"><b>02</b> / 04</span>
+    </footer>
+    <script src="/script.js?v=20260820"></script>
+  </body>
+</html>

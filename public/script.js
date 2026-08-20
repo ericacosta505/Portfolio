@@ -1,75 +1,96 @@
-const header = document.querySelector(".site-header");
-const progress = document.querySelector(".page-progress i");
-const menuButton = document.querySelector(".menu-button");
-const menuLabel = menuButton.querySelector("span");
-const navigation = document.querySelector(".navigation");
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-function updatePageDetails() {
-  const available = document.documentElement.scrollHeight - window.innerHeight;
-  const percent = available > 0 ? (window.scrollY / available) * 100 : 0;
-
-  progress.style.width = `${percent}%`;
-  header.classList.toggle("scrolled", window.scrollY > 20);
-}
-
-function closeMenu() {
-  menuButton.setAttribute("aria-expanded", "false");
-  menuLabel.textContent = "MENU";
-  navigation.classList.remove("open");
-  document.body.classList.remove("menu-open");
-}
-
-menuButton.addEventListener("click", () => {
-  const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-
-  menuButton.setAttribute("aria-expanded", String(!isOpen));
-  menuLabel.textContent = isOpen ? "MENU" : "CLOSE";
-  navigation.classList.toggle("open", !isOpen);
-  document.body.classList.toggle("menu-open", !isOpen);
+window.requestAnimationFrame(() => {
+  document.body.classList.add("is-ready");
 });
 
-navigation.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+document.querySelectorAll("a.page-link").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    if (
+      event.defaultPrevented ||
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.altKey ||
+      reduceMotion.matches
+    ) {
+      return;
+    }
 
-window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeMenu();
+    const destination = new URL(link.href, window.location.href);
+    if (destination.origin !== window.location.origin) return;
+
+    event.preventDefault();
+    document.body.classList.add("is-leaving");
+    window.setTimeout(() => {
+      window.location.href = destination.href;
+    }, 220);
+  });
 });
 
-window.addEventListener("scroll", updatePageDetails, { passive: true });
-updatePageDetails();
+const projectButtons = Array.from(document.querySelectorAll("[data-project-button]"));
+const projectPanels = Array.from(document.querySelectorAll(".project-panel[data-project]"));
+const projectDetails = Array.from(document.querySelectorAll("[data-project-detail]"));
 
-function updateAustinTime() {
-  const value = new Intl.DateTimeFormat("en-US", {
-    timeZone: "America/Chicago",
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-  }).format(new Date());
+function activateProject(index) {
+  projectButtons.forEach((button) => {
+    const isActive = button.dataset.projectButton === String(index);
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-selected", String(isActive));
+    button.tabIndex = isActive ? 0 : -1;
+  });
 
-  document.getElementById("austin-time").textContent = `${value} CT`;
+  projectPanels.forEach((panel) => {
+    const isActive = panel.dataset.project === String(index);
+    panel.classList.toggle("is-active", isActive);
+    panel.setAttribute("aria-hidden", String(!isActive));
+  });
+
+  projectDetails.forEach((detail) => {
+    const isActive = detail.dataset.projectDetail === String(index);
+    detail.classList.toggle("is-active", isActive);
+    detail.hidden = !isActive;
+  });
 }
 
-updateAustinTime();
-window.setInterval(updateAustinTime, 30_000);
-
-const revealItems = document.querySelectorAll(".reveal");
-
-if (reduceMotion || !("IntersectionObserver" in window)) {
-  revealItems.forEach((item) => item.classList.add("in-view"));
-} else {
-  const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-
-        entry.target.classList.add("in-view");
-        observer.unobserve(entry.target);
+projectButtons.forEach((button, index) => {
+  button.addEventListener("mouseenter", () => activateProject(index));
+  button.addEventListener("focus", () => activateProject(index));
+  button.addEventListener("click", () => {
+    activateProject(index);
+    if (window.matchMedia("(max-width: 760px)").matches) {
+      document.querySelector(".work-stage")?.scrollIntoView({
+        behavior: reduceMotion.matches ? "auto" : "smooth",
+        block: "center",
       });
-    },
-    { threshold: 0.11, rootMargin: "0px 0px -5% 0px" },
-  );
+    }
+  });
+  button.addEventListener("keydown", (event) => {
+    if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
+    event.preventDefault();
+    const direction = event.key === "ArrowDown" ? 1 : -1;
+    const nextIndex = (index + direction + projectButtons.length) % projectButtons.length;
+    projectButtons[nextIndex].focus();
+    activateProject(nextIndex);
+  });
+});
 
-  revealItems.forEach((item) => revealObserver.observe(item));
+const artwork = document.querySelector(".architectural-art, .contact-mark");
+const artView = artwork?.closest(".view");
+
+if (artwork && artView) {
+  artView.addEventListener("pointermove", (event) => {
+    if (reduceMotion.matches) return;
+    const bounds = artView.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+    artwork.style.setProperty("--art-x", `${x * 14}px`);
+    artwork.style.setProperty("--art-y", `${y * 14}px`);
+  });
+
+  artView.addEventListener("pointerleave", () => {
+    artwork.style.setProperty("--art-x", "0px");
+    artwork.style.setProperty("--art-y", "0px");
+  });
 }
-
-document.getElementById("year").textContent = new Date().getFullYear();
