@@ -18,7 +18,7 @@
     <meta property="og:image" content="https://ericacosta.dev/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Eric Acosta portfolio with an architectural pavilion illustration" />
+    <meta property="og:image:alt" content="Eric Acosta portfolio with a source-to-ship software pipeline illustration" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://ericacosta.dev/og.png" />
     <meta name="theme-color" content="#e7e2d8" />
@@ -31,7 +31,7 @@
       href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/index.css?v=20260820" />
+    <link rel="stylesheet" href="/index.css?v=20260820o" />
   </head>
   <body class="page-home">
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -61,51 +61,131 @@
         </div>
       </section>
 
-      <section class="home-art" aria-label="Architectural illustration of a modernist pavilion">
-        <div class="architectural-art">
-          <svg viewBox="0 0 640 620" role="img" aria-labelledby="art-title art-description">
-            <title id="art-title">Courtyard study</title>
-            <desc id="art-description">An axonometric modernist pavilion beside a blue reflecting pool and an orange sun.</desc>
+      <section class="home-art" aria-label="Illustration of a software idea moving from source code through a build pipeline into a finished product">
+        <div class="system-art">
+          <svg viewBox="0 0 640 620" role="img" aria-labelledby="system-art-title system-art-description">
+            <title id="system-art-title">Source to ship</title>
+            <desc id="system-art-description">Layered source editor, build and test pipeline, and live product interface connected by flowing data signals.</desc>
 
-            <g class="art-guides" aria-hidden="true">
-              <path d="M42 522 330 366 615 518" />
-              <path d="M56 555 330 406 597 548" />
-              <path d="M105 585 367 443 572 552" />
-              <path d="M135 118 578 352" />
-              <path d="M135 151 553 371" />
+            <g class="system-guides" aria-hidden="true">
+              <path d="M36 95H604M36 455H604M83 50V535M555 50V535" />
+              <path d="M36 120H112M528 430H604" />
             </g>
 
-            <circle class="art-sun" cx="462" cy="154" r="92" />
+            <path id="system-flow-path-a" class="system-flow-line" d="M34 466H128c31 0 26-38 58-38h45" />
+            <path id="system-flow-path-b" class="system-flow-line" d="M431 428h43c35 0 29 44 64 44h68" />
+            <circle class="system-port" cx="34" cy="466" r="7" />
+            <circle class="system-port system-port--blue" cx="606" cy="472" r="7" />
+            <circle class="system-packet system-packet--one" r="5" aria-hidden="true">
+              <animateMotion dur="3.8s" repeatCount="indefinite">
+                <mpath href="#system-flow-path-a" />
+              </animateMotion>
+              <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.14;0.86;1" dur="3.8s" repeatCount="indefinite" />
+            </circle>
+            <circle class="system-packet system-packet--two" r="5" aria-hidden="true">
+              <animateMotion dur="3.8s" begin="-1.2s" repeatCount="indefinite">
+                <mpath href="#system-flow-path-b" />
+              </animateMotion>
+              <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.14;0.86;1" dur="3.8s" begin="-1.2s" repeatCount="indefinite" />
+            </circle>
 
-            <polygon class="art-ground" points="70,455 320,320 574,455 326,592" />
-            <polygon class="art-ground-shadow" points="163,417 348,319 508,404 324,505" />
+            <g class="system-source" transform="rotate(-5 178 263)">
+              <rect class="system-shadow" x="52" y="132" width="272" height="270" />
+              <rect class="system-panel" x="42" y="120" width="272" height="270" />
+              <rect class="system-panel-head" x="42" y="120" width="272" height="43" />
+              <circle class="system-window-dot system-window-dot--orange" cx="61" cy="142" r="5" />
+              <circle class="system-window-dot system-window-dot--paper" cx="78" cy="142" r="5" />
+              <circle class="system-window-dot system-window-dot--olive" cx="95" cy="142" r="5" />
+              <text class="system-file-label" x="297" y="146" text-anchor="end">SOURCE / APP.JS</text>
 
-            <g class="art-pavilion">
-              <polygon class="art-roof" points="132,174 354,291 400,266 177,149" />
-              <polygon class="art-wall" points="132,174 354,291 354,485 132,368" />
-              <polygon class="art-side" points="354,291 400,266 400,459 354,485" />
+              <g class="system-code" aria-hidden="true">
+                <text x="59" y="195">01</text><rect class="system-code-blue" x="88" y="184" width="92" height="10" />
+                <rect x="187" y="184" width="55" height="10" />
+                <text x="59" y="228">02</text><rect x="105" y="217" width="125" height="10" />
+                <rect class="system-code-orange" x="88" y="217" width="11" height="10" />
+                <text x="59" y="261">03</text><rect class="system-code-olive" x="121" y="250" width="88" height="10" />
+                <rect x="88" y="250" width="26" height="10" />
+                <text x="59" y="294">04</text><rect x="105" y="283" width="143" height="10" />
+                <rect class="system-code-blue" x="88" y="283" width="11" height="10" />
+                <text x="59" y="327">05</text><rect class="system-code-orange" x="88" y="316" width="72" height="10" />
+                <rect x="166" y="316" width="40" height="10" />
+              </g>
 
-              <path class="art-portal" d="M205 407V292c0-38 27-52 59-35 32 17 58 60 58 98v113Z" />
-              <path class="art-wall-line" d="M158 215 330 306M158 248l172 91M158 281l172 91" />
-
-              <polygon class="art-canopy" points="337,335 519,431 519,463 337,367" />
-              <path class="art-column" d="M374 389v102M487 449v102" />
+              <path class="system-editor-rule" d="M42 348H314" />
+              <circle class="system-ready-dot" cx="60" cy="370" r="5" />
+              <text class="system-editor-status" x="73" y="374">SOURCE READY</text>
+              <text class="system-editor-status" x="296" y="374" text-anchor="end">6.2 KB</text>
             </g>
 
-            <g class="art-stairs">
-              <polygon points="391,487 502,546 475,561 364,502" />
-              <polygon points="374,504 475,558 448,573 347,519" />
-              <polygon points="357,521 448,570 421,585 330,536" />
+            <g class="system-product" transform="rotate(4 471 255)">
+              <rect class="system-shadow" x="343" y="100" width="264" height="316" />
+              <rect class="system-panel" x="331" y="88" width="264" height="316" />
+              <rect class="system-product-head" x="331" y="88" width="264" height="50" />
+              <circle class="system-live-dot" cx="353" cy="113" r="6" />
+              <text class="system-product-label" x="368" y="117">PRODUCT / LIVE</text>
+              <text class="system-product-label" x="577" y="117" text-anchor="end">V1.0</text>
+
+              <rect class="system-hero-module" x="353" y="160" width="220" height="50" />
+              <text class="system-module-eyebrow" x="369" y="181">THE USEFUL PART</text>
+              <rect class="system-module-line" x="369" y="190" width="110" height="6" />
+
+              <rect class="system-chart" x="353" y="228" width="102" height="112" />
+              <path class="system-chart-grid" d="M369 250H439M369 274H439M369 298H439M369 322H439" />
+              <path class="system-chart-line" d="m370 314 17-21 17 8 18-34 17 9" />
+              <circle class="system-chart-node" cx="439" cy="276" r="5" />
+
+              <rect class="system-module-orange" x="471" y="228" width="102" height="49" />
+              <text class="system-module-number" x="485" y="261">98</text>
+              <text class="system-module-suffix" x="553" y="260" text-anchor="end">%</text>
+              <rect class="system-module-card" x="471" y="291" width="102" height="49" />
+              <circle class="system-module-check" cx="491" cy="315" r="8" />
+              <path class="system-module-tick" d="m487 315 3 3 6-7" />
+              <rect class="system-module-line system-module-line--dark" x="507" y="306" width="50" height="6" />
+              <rect class="system-module-line system-module-line--short" x="507" y="320" width="34" height="5" />
+
+              <path class="system-editor-rule" d="M331 361H595" />
+              <text class="system-product-foot" x="352" y="384">DESIGN</text>
+              <text class="system-product-foot" x="464" y="384" text-anchor="middle">CODE</text>
+              <text class="system-product-foot" x="574" y="384" text-anchor="end">SHIP</text>
             </g>
 
-            <polygon class="art-pool" points="208,488 330,422 472,497 350,564" />
-            <path class="art-pool-line" d="m225 500 122-65M251 514l121-65M278 529l121-65M304 543l121-65" />
+            <g class="system-compiler">
+              <rect class="system-compiler-shadow" x="180" y="356" width="282" height="174" />
+              <rect class="system-compiler-panel" x="168" y="344" width="282" height="174" />
+              <text class="system-compiler-kicker" x="193" y="376">BUILD PIPELINE / 04</text>
+              <text class="system-compiler-state" x="425" y="376" text-anchor="end">ALL SYSTEMS GO</text>
+
+              <path class="system-step-line" d="M216 416H400" />
+              <g class="system-step system-step--one">
+                <circle cx="216" cy="416" r="17" /><path d="m209 416 5 5 10-12" />
+                <text x="216" y="454" text-anchor="middle">BUILD</text>
+              </g>
+              <g class="system-step system-step--two">
+                <circle cx="308" cy="416" r="17" /><path d="m301 416 5 5 10-12" />
+                <text x="308" y="454" text-anchor="middle">TEST</text>
+              </g>
+              <g class="system-step system-step--three">
+                <circle cx="400" cy="416" r="17" /><path d="m393 416 5 5 10-12" />
+                <text x="400" y="454" text-anchor="middle">SHIP</text>
+              </g>
+
+              <rect class="system-progress-track" x="193" y="478" width="232" height="10" />
+              <rect class="system-progress-fill" x="193" y="478" width="232" height="10" />
+              <text class="system-progress-label" x="193" y="505">COMPILED WITHOUT COMPROMISE</text>
+              <rect class="system-cursor" x="419" y="496" width="6" height="10" />
+            </g>
+
+            <g class="system-code-mark" transform="translate(508 48)">
+              <rect class="system-mark-shadow" x="8" y="8" width="90" height="90" />
+              <rect class="system-mark" width="90" height="90" />
+              <text x="45" y="58" text-anchor="middle">&lt;/&gt;</text>
+            </g>
 
           </svg>
 
-          <div class="art-plaque">
-            <span>Courtyard study / 01</span>
-            <b>Form follows curiosity.</b>
+          <div class="system-plaque">
+            <span>Runtime study / 01</span>
+            <b>Ideas, compiled.</b>
           </div>
         </div>
       </section>
@@ -140,6 +220,6 @@
         ]
       }
     </script>
-    <script src="/script.js?v=20260820"></script>
+    <script src="/script.js?v=20260820b"></script>
   </body>
 </html>

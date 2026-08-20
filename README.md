@@ -6,7 +6,7 @@ An editorial, interaction-led portfolio for software engineer Eric Acosta, built
 
 - Separate full-screen Home, Work, About, and Contact pages
 - Interactive selected-work preview with keyboard controls
-- Custom architectural SVG artwork and fast page transitions
+- Custom source-to-ship software SVG artwork and fast page transitions
 - Warm modernist palette with condensed poster typography
 - Desktop layouts that stay within the viewport
 - Responsive touch and reduced-motion behavior

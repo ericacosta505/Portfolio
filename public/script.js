@@ -76,7 +76,7 @@ projectButtons.forEach((button, index) => {
   });
 });
 
-const artwork = document.querySelector(".architectural-art, .contact-mark");
+const artwork = document.querySelector(".system-art, .contact-mark");
 const artView = artwork?.closest(".view");
 
 if (artwork && artView) {

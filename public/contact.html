@@ -8,7 +8,7 @@
       content="Get in touch with Austin-based software engineer Eric Acosta."
     />
     <title>Contact — Eric Acosta</title>
-    <meta name="theme-color" content="#d96543" />
+    <meta name="theme-color" content="#e7e2d8" />
     <meta property="og:title" content="Contact — Eric Acosta" />
     <meta property="og:description" content="Contact Austin-based software engineer Eric Acosta." />
     <meta property="og:type" content="website" />
@@ -17,7 +17,7 @@
     <meta property="og:image" content="https://ericacosta.dev/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Eric Acosta portfolio with an architectural pavilion illustration" />
+    <meta property="og:image:alt" content="Eric Acosta portfolio with a source-to-ship software pipeline illustration" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://ericacosta.dev/og.png" />
     <link rel="canonical" href="https://ericacosta.dev/contact.html" />
@@ -28,7 +28,7 @@
       href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/index.css?v=20260820" />
+    <link rel="stylesheet" href="/index.css?v=20260820o" />
   </head>
   <body class="page-contact">
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -46,25 +46,41 @@
     </header>
 
     <main class="view contact-view" id="main-content" tabindex="-1">
-      <p class="contact-kicker">New ideas / thoughtful teams / useful work</p>
-      <h1><span>Let’s make</span><em>something useful.</em></h1>
-      <div class="contact-actions">
-        <a class="email-button" href="mailto:acosta.eric505@icloud.com">
-          acosta.eric505@icloud.com <span>↗</span>
-        </a>
-        <div class="contact-socials">
-          <a href="https://www.linkedin.com/in/eric-acosta505/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-          <a href="https://github.com/ericacosta505" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <section class="contact-copy" aria-labelledby="contact-title">
+        <p class="contact-kicker">New ideas / thoughtful teams / useful work</p>
+        <h1 id="contact-title"><span>Let’s make</span><em>something useful.</em></h1>
+        <div class="contact-actions">
+          <a class="email-button" href="mailto:acosta.eric505@icloud.com">
+            acosta.eric505@icloud.com <span>↗</span>
+          </a>
+          <div class="contact-socials">
+            <a href="https://www.linkedin.com/in/eric-acosta505/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a href="https://github.com/ericacosta505" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div class="contact-mark" aria-hidden="true">
-        <div class="contact-ring"></div>
-        <div class="contact-square"></div>
-        <div class="contact-slash"></div>
-        <div class="contact-label">OPEN<br />CHANNEL</div>
+      <div class="contact-mark contact-system" role="img" aria-label="Open message channel. Replies from Austin, Central time.">
+        <div class="contact-window">
+          <div class="panel-chrome contact-window-chrome">
+            <span class="panel-dots"><i></i><i></i><i></i></span>
+            <span>Message.route / hello</span>
+            <b>Open</b>
+          </div>
+          <div class="contact-route">
+            <span class="contact-node contact-node--you"><i></i><b>You</b><small>Input</small></span>
+            <span class="contact-route-line"><i></i></span>
+            <span class="contact-node contact-node--eric"><i></i><b>Eric</b><small>Reply</small></span>
+          </div>
+        </div>
+        <div class="contact-terminal">
+          <span>POST /hello HTTP/1.1</span>
+          <b>200 — Channel open</b>
+          <small>Replies from Austin / Central time</small>
+        </div>
+        <div class="contact-code-mark">&lt;/&gt;</div>
+        <div class="contact-label"><span>Connection study / 04</span><b>Say hello.</b></div>
       </div>
-      <div class="availability-note">Austin, TX<br />Central time</div>
     </main>
 
     <footer class="site-footer">
@@ -72,6 +88,6 @@
       <a class="footer-center page-link" href="/">Back / Index ↗</a>
       <span class="page-count"><b>04</b> / 04</span>
     </footer>
-    <script src="/script.js?v=20260820"></script>
+    <script src="/script.js?v=20260820b"></script>
   </body>
 </html>
