@@ -20,7 +20,13 @@ app.use(express.static(publicDirectory, {
   etag: true,
   maxAge: "1h",
   setHeaders(response, filePath) {
-    if (path.extname(filePath) === ".html") {
+    // Revalidate page code and icons so browser caches stay in sync with edits.
+    const filename = path.basename(filePath);
+    if (
+      [".html", ".css", ".js"].includes(path.extname(filePath)) ||
+      filename.startsWith("favicon") ||
+      filename === "apple-touch-icon.png"
+    ) {
       response.setHeader("Cache-Control", "no-cache");
     }
   },

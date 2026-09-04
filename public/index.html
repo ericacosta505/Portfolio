@@ -21,182 +21,49 @@
     <meta property="og:image:alt" content="Eric Acosta portfolio with a source-to-ship software pipeline illustration" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://ericacosta.dev/og.png" />
-    <meta name="theme-color" content="#e7e2d8" />
+    <meta name="theme-color" content="#f2f0e9" />
     <title>Eric Acosta — Software Engineer</title>
     <link rel="canonical" href="https://ericacosta.dev/" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico?v=20260904-ink" sizes="16x16 24x24 32x32 48x48 64x64" />
+    <link rel="icon" href="/favicon-ink.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/favicon-ink.svg" type="image/svg+xml" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20260904-ink" sizes="180x180" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;600&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/index.css?v=20260820o" />
+    <link rel="stylesheet" href="/index.css?v=20260904b" />
   </head>
-  <body class="page-home">
-    <a class="skip-link" href="#main-content">Skip to content</a>
+  <body class="page-index">
+<a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
-      <a class="site-brand page-link" href="/" aria-label="Eric Acosta, home">
-        <span>ERIC ACOSTA</span><i>Software + Product</i>
-      </a>
-      <span class="page-name">Index / 01</span>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a class="page-link" href="/" aria-current="page">Home</a>
-        <a class="page-link" href="/work.html">Work</a>
-        <a class="page-link" href="/about.html">About</a>
-        <a class="page-link" href="/contact.html">Contact</a>
-      </nav>
-    </header>
-
-    <main class="view home-view" id="main-content" tabindex="-1">
-      <section class="home-copy" aria-labelledby="home-title">
-        <p class="hello-line">Software engineer / Austin, Texas</p>
-        <h1 id="home-title"><span>Eric</span><span>Acosta</span></h1>
-        <p class="home-intro">
-          I build digital products that make complex ideas feel obvious.
-        </p>
-        <div class="home-links">
-          <a class="soft-link page-link" href="/work.html">Selected work <span>↗</span></a>
-          <a class="soft-link page-link" href="/about.html">More about me <span>↗</span></a>
+      <div class="header-tools">
+        <span class="local-time"><span class="status-dot" aria-hidden="true"></span>Austin <time data-clock></time></span>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to night theme" aria-pressed="false" hidden><span class="theme-icon" aria-hidden="true">◐</span><span data-theme-label>Lights off</span></button>
+      </div>
+      <a class="header-contact" href="/contact.html">Say hello <span aria-hidden="true">↗</span></a>
+    </header><main id="main-content" class="home-main" tabindex="-1">
+      <div class="home-identity">
+        <p class="eyebrow">Software engineer. Product thinker. Curious human.</p>
+        <h1 class="name-lockup">Eric <em>Acosta</em></h1>
+        <span class="identity-caption">A small corner of the internet, from Austin, Texas.</span>
+      </div>
+      <div class="home-statement">
+        <h2>I make complicated things<br>feel <em>wonderfully simple.</em></h2>
+        <p>Thoughtful products, friendly interfaces,<br class="mobile-break"> and the systems behind them.</p>
+      </div>
+      <section class="home-projects" aria-labelledby="home-work-label">
+        <h3 class="eyebrow" id="home-work-label">A few things I’ve helped bring to life</h3>
+        <div class="project-peeks">
+          <a class="project-peek" href="/work.html#project-0"><span class="peek-image peek-mosaic"><img src="/assets/mosaic-daily-health.png" width="1290" height="2796" alt="" decoding="async"></span><span>Mosaic<small>A healthier everyday</small></span><span class="peek-arrow" aria-hidden="true">↗</span></a>
+          <a class="project-peek" href="/work.html#project-1"><span class="peek-image peek-foundry"><img src="/assets/foundryzero-website.png" width="1200" height="630" alt="" decoding="async"></span><span>FoundryZero<small>A home for big ideas</small></span><span class="peek-arrow" aria-hidden="true">↗</span></a>
+          <a class="project-peek" href="/work.html#project-2"><span class="peek-image peek-albumatic"><img src="/assets/albumatic-preview.jpeg" width="566" height="924" alt="" decoding="async"></span><span>Albumatic<small>Music, in good company</small></span><span class="peek-arrow" aria-hidden="true">↗</span></a>
         </div>
       </section>
-
-      <section class="home-art" aria-label="Illustration of a software idea moving from source code through a build pipeline into a finished product">
-        <div class="system-art">
-          <svg viewBox="0 0 640 620" role="img" aria-labelledby="system-art-title system-art-description">
-            <title id="system-art-title">Source to ship</title>
-            <desc id="system-art-description">Layered source editor, build and test pipeline, and live product interface connected by flowing data signals.</desc>
-
-            <g class="system-guides" aria-hidden="true">
-              <path d="M36 95H604M36 455H604M83 50V535M555 50V535" />
-              <path d="M36 120H112M528 430H604" />
-            </g>
-
-            <path id="system-flow-path-a" class="system-flow-line" d="M34 466H128c31 0 26-38 58-38h45" />
-            <path id="system-flow-path-b" class="system-flow-line" d="M431 428h43c35 0 29 44 64 44h68" />
-            <circle class="system-port" cx="34" cy="466" r="7" />
-            <circle class="system-port system-port--blue" cx="606" cy="472" r="7" />
-            <circle class="system-packet system-packet--one" r="5" aria-hidden="true">
-              <animateMotion dur="3.8s" repeatCount="indefinite">
-                <mpath href="#system-flow-path-a" />
-              </animateMotion>
-              <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.14;0.86;1" dur="3.8s" repeatCount="indefinite" />
-            </circle>
-            <circle class="system-packet system-packet--two" r="5" aria-hidden="true">
-              <animateMotion dur="3.8s" begin="-1.2s" repeatCount="indefinite">
-                <mpath href="#system-flow-path-b" />
-              </animateMotion>
-              <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.14;0.86;1" dur="3.8s" begin="-1.2s" repeatCount="indefinite" />
-            </circle>
-
-            <g class="system-source" transform="rotate(-5 178 263)">
-              <rect class="system-shadow" x="52" y="132" width="272" height="270" />
-              <rect class="system-panel" x="42" y="120" width="272" height="270" />
-              <rect class="system-panel-head" x="42" y="120" width="272" height="43" />
-              <circle class="system-window-dot system-window-dot--orange" cx="61" cy="142" r="5" />
-              <circle class="system-window-dot system-window-dot--paper" cx="78" cy="142" r="5" />
-              <circle class="system-window-dot system-window-dot--olive" cx="95" cy="142" r="5" />
-              <text class="system-file-label" x="297" y="146" text-anchor="end">SOURCE / APP.JS</text>
-
-              <g class="system-code" aria-hidden="true">
-                <text x="59" y="195">01</text><rect class="system-code-blue" x="88" y="184" width="92" height="10" />
-                <rect x="187" y="184" width="55" height="10" />
-                <text x="59" y="228">02</text><rect x="105" y="217" width="125" height="10" />
-                <rect class="system-code-orange" x="88" y="217" width="11" height="10" />
-                <text x="59" y="261">03</text><rect class="system-code-olive" x="121" y="250" width="88" height="10" />
-                <rect x="88" y="250" width="26" height="10" />
-                <text x="59" y="294">04</text><rect x="105" y="283" width="143" height="10" />
-                <rect class="system-code-blue" x="88" y="283" width="11" height="10" />
-                <text x="59" y="327">05</text><rect class="system-code-orange" x="88" y="316" width="72" height="10" />
-                <rect x="166" y="316" width="40" height="10" />
-              </g>
-
-              <path class="system-editor-rule" d="M42 348H314" />
-              <circle class="system-ready-dot" cx="60" cy="370" r="5" />
-              <text class="system-editor-status" x="73" y="374">SOURCE READY</text>
-              <text class="system-editor-status" x="296" y="374" text-anchor="end">6.2 KB</text>
-            </g>
-
-            <g class="system-product" transform="rotate(4 471 255)">
-              <rect class="system-shadow" x="343" y="100" width="264" height="316" />
-              <rect class="system-panel" x="331" y="88" width="264" height="316" />
-              <rect class="system-product-head" x="331" y="88" width="264" height="50" />
-              <circle class="system-live-dot" cx="353" cy="113" r="6" />
-              <text class="system-product-label" x="368" y="117">PRODUCT / LIVE</text>
-              <text class="system-product-label" x="577" y="117" text-anchor="end">V1.0</text>
-
-              <rect class="system-hero-module" x="353" y="160" width="220" height="50" />
-              <text class="system-module-eyebrow" x="369" y="181">THE USEFUL PART</text>
-              <rect class="system-module-line" x="369" y="190" width="110" height="6" />
-
-              <rect class="system-chart" x="353" y="228" width="102" height="112" />
-              <path class="system-chart-grid" d="M369 250H439M369 274H439M369 298H439M369 322H439" />
-              <path class="system-chart-line" d="m370 314 17-21 17 8 18-34 17 9" />
-              <circle class="system-chart-node" cx="439" cy="276" r="5" />
-
-              <rect class="system-module-orange" x="471" y="228" width="102" height="49" />
-              <text class="system-module-number" x="485" y="261">98</text>
-              <text class="system-module-suffix" x="553" y="260" text-anchor="end">%</text>
-              <rect class="system-module-card" x="471" y="291" width="102" height="49" />
-              <circle class="system-module-check" cx="491" cy="315" r="8" />
-              <path class="system-module-tick" d="m487 315 3 3 6-7" />
-              <rect class="system-module-line system-module-line--dark" x="507" y="306" width="50" height="6" />
-              <rect class="system-module-line system-module-line--short" x="507" y="320" width="34" height="5" />
-
-              <path class="system-editor-rule" d="M331 361H595" />
-              <text class="system-product-foot" x="352" y="384">DESIGN</text>
-              <text class="system-product-foot" x="464" y="384" text-anchor="middle">CODE</text>
-              <text class="system-product-foot" x="574" y="384" text-anchor="end">SHIP</text>
-            </g>
-
-            <g class="system-compiler">
-              <rect class="system-compiler-shadow" x="180" y="356" width="282" height="174" />
-              <rect class="system-compiler-panel" x="168" y="344" width="282" height="174" />
-              <text class="system-compiler-kicker" x="193" y="376">BUILD PIPELINE / 04</text>
-              <text class="system-compiler-state" x="425" y="376" text-anchor="end">ALL SYSTEMS GO</text>
-
-              <path class="system-step-line" d="M216 416H400" />
-              <g class="system-step system-step--one">
-                <circle cx="216" cy="416" r="17" /><path d="m209 416 5 5 10-12" />
-                <text x="216" y="454" text-anchor="middle">BUILD</text>
-              </g>
-              <g class="system-step system-step--two">
-                <circle cx="308" cy="416" r="17" /><path d="m301 416 5 5 10-12" />
-                <text x="308" y="454" text-anchor="middle">TEST</text>
-              </g>
-              <g class="system-step system-step--three">
-                <circle cx="400" cy="416" r="17" /><path d="m393 416 5 5 10-12" />
-                <text x="400" y="454" text-anchor="middle">SHIP</text>
-              </g>
-
-              <rect class="system-progress-track" x="193" y="478" width="232" height="10" />
-              <rect class="system-progress-fill" x="193" y="478" width="232" height="10" />
-              <text class="system-progress-label" x="193" y="505">COMPILED WITHOUT COMPROMISE</text>
-              <rect class="system-cursor" x="419" y="496" width="6" height="10" />
-            </g>
-
-            <g class="system-code-mark" transform="translate(508 48)">
-              <rect class="system-mark-shadow" x="8" y="8" width="90" height="90" />
-              <rect class="system-mark" width="90" height="90" />
-              <text x="45" y="58" text-anchor="middle">&lt;/&gt;</text>
-            </g>
-
-          </svg>
-
-          <div class="system-plaque">
-            <span>Runtime study / 01</span>
-            <b>Ideas, compiled.</b>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <span>Austin / Texas</span>
-      <span class="footer-center">Design · Code · Product</span>
-      <span class="page-count"><b>01</b> / 04</span>
-    </footer>
-    <script type="application/ld+json">
+      <span class="margin-note" aria-hidden="true">Always a work in progress.</span>
+    </main><footer class="site-footer"><nav class="site-nav" aria-label="Primary navigation"><a href="/" aria-current="page">Home</a><a href="/work.html">The work</a><a href="/about.html">A little about me</a><a href="/contact.html">Get in touch</a></nav><div class="footer-colophon"><span>© <span data-year>2026</span> Eric Acosta</span><span class="footer-note">Made with care &amp; curiosity.</span><a href="https://github.com/ericacosta505" target="_blank" rel="noopener noreferrer">Elsewhere: GitHub ↗</a></div></footer><script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
@@ -219,7 +86,6 @@
           "https://www.linkedin.com/in/eric-acosta505/"
         ]
       }
-    </script>
-    <script src="/script.js?v=20260820b"></script>
-  </body>
+    </script><script src="/script.js?v=20260904b" defer></script>
+</body>
 </html>

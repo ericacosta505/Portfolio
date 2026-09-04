@@ -1,96 +1,66 @@
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-window.requestAnimationFrame(() => {
-  document.body.classList.add("is-ready");
-});
-
-document.querySelectorAll("a.page-link").forEach((link) => {
-  link.addEventListener("click", (event) => {
-    if (
-      event.defaultPrevented ||
-      event.button !== 0 ||
-      event.metaKey ||
-      event.ctrlKey ||
-      event.shiftKey ||
-      event.altKey ||
-      reduceMotion.matches
-    ) {
-      return;
-    }
-
-    const destination = new URL(link.href, window.location.href);
-    if (destination.origin !== window.location.origin) return;
-
-    event.preventDefault();
-    document.body.classList.add("is-leaving");
-    window.setTimeout(() => {
-      window.location.href = destination.href;
-    }, 220);
-  });
-});
-
-const projectButtons = Array.from(document.querySelectorAll("[data-project-button]"));
-const projectPanels = Array.from(document.querySelectorAll(".project-panel[data-project]"));
-const projectDetails = Array.from(document.querySelectorAll("[data-project-detail]"));
-
-function activateProject(index) {
-  projectButtons.forEach((button) => {
-    const isActive = button.dataset.projectButton === String(index);
-    button.classList.toggle("is-active", isActive);
-    button.setAttribute("aria-selected", String(isActive));
-    button.tabIndex = isActive ? 0 : -1;
-  });
-
-  projectPanels.forEach((panel) => {
-    const isActive = panel.dataset.project === String(index);
-    panel.classList.toggle("is-active", isActive);
-    panel.setAttribute("aria-hidden", String(!isActive));
-  });
-
-  projectDetails.forEach((detail) => {
-    const isActive = detail.dataset.projectDetail === String(index);
-    detail.classList.toggle("is-active", isActive);
-    detail.hidden = !isActive;
+const themeButton = document.querySelector('[data-theme-toggle]');
+let nightTheme = false;
+try { nightTheme = localStorage.getItem('portfolio-theme') === 'night'; } catch {}
+function applyTheme() {
+  document.documentElement.dataset.theme = nightTheme ? 'night' : 'day';
+  if (!themeButton) return;
+  themeButton.setAttribute('aria-pressed', String(nightTheme));
+  themeButton.setAttribute('aria-label', nightTheme ? 'Lights on: switch to day theme' : 'Lights off: switch to night theme');
+  themeButton.querySelector('[data-theme-label]').textContent = nightTheme ? 'Lights on' : 'Lights off';
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', nightTheme ? '#242820' : '#f2f0e9');
+}
+applyTheme();
+if (themeButton) {
+  themeButton.hidden = false;
+  themeButton.addEventListener('click', () => {
+    nightTheme = !nightTheme;
+    applyTheme();
+    try { localStorage.setItem('portfolio-theme', nightTheme ? 'night' : 'day'); } catch {}
   });
 }
+const clock = document.querySelector('[data-clock]');
+const austinTime = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Chicago', hour: 'numeric', minute: '2-digit', hour12: true });
+function updateClock() {
+  const now = new Date();
+  if (clock) { clock.textContent = austinTime.format(now); clock.dateTime = now.toISOString(); }
+  document.querySelectorAll('[data-year]').forEach(element => { element.textContent = now.getFullYear(); });
+}
+updateClock();
+setInterval(updateClock, 1000 * 30);
 
+// Project tabs: pointer, keyboard, and direct links all select the same panel.
+const projectButtons = Array.from(document.querySelectorAll('[data-project-button]'));
+const projectPanels = Array.from(document.querySelectorAll('[data-project-panel]'));
+function activateProject(index, updateUrl = false) {
+  if (!projectPanels[index]) return;
+  projectButtons.forEach((button, position) => {
+    button.setAttribute('aria-selected', String(position === index));
+    button.tabIndex = position === index ? 0 : -1;
+  });
+  projectPanels.forEach((panel, position) => { panel.hidden = position !== index; });
+  if (updateUrl) history.replaceState(null, '', `#project-${index}`);
+}
+function selectLinkedProject() {
+  const match = window.location.hash.match(/^#project-([0-2])$/);
+  if (match) activateProject(Number(match[1]));
+}
 projectButtons.forEach((button, index) => {
-  button.addEventListener("mouseenter", () => activateProject(index));
-  button.addEventListener("focus", () => activateProject(index));
-  button.addEventListener("click", () => {
-    activateProject(index);
-    if (window.matchMedia("(max-width: 760px)").matches) {
-      document.querySelector(".work-stage")?.scrollIntoView({
-        behavior: reduceMotion.matches ? "auto" : "smooth",
-        block: "center",
-      });
-    }
+  button.addEventListener('click', () => activateProject(index, true));
+  button.addEventListener('focus', () => activateProject(index));
+  button.addEventListener('pointerenter', event => {
+    if (event.pointerType === 'mouse') activateProject(index);
   });
-  button.addEventListener("keydown", (event) => {
-    if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
+  button.addEventListener('keydown', event => {
+    let next;
+    if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % projectButtons.length;
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index - 1 + projectButtons.length) % projectButtons.length;
+    if (event.key === 'Home') next = 0;
+    if (event.key === 'End') next = projectButtons.length - 1;
+    if (next === undefined) return;
     event.preventDefault();
-    const direction = event.key === "ArrowDown" ? 1 : -1;
-    const nextIndex = (index + direction + projectButtons.length) % projectButtons.length;
-    projectButtons[nextIndex].focus();
-    activateProject(nextIndex);
+    projectButtons[next].focus();
+    activateProject(next, true);
   });
 });
-
-const artwork = document.querySelector(".system-art, .contact-mark");
-const artView = artwork?.closest(".view");
-
-if (artwork && artView) {
-  artView.addEventListener("pointermove", (event) => {
-    if (reduceMotion.matches) return;
-    const bounds = artView.getBoundingClientRect();
-    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
-    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
-    artwork.style.setProperty("--art-x", `${x * 14}px`);
-    artwork.style.setProperty("--art-y", `${y * 14}px`);
-  });
-
-  artView.addEventListener("pointerleave", () => {
-    artwork.style.setProperty("--art-x", "0px");
-    artwork.style.setProperty("--art-y", "0px");
-  });
-}
+selectLinkedProject();
+window.addEventListener('hashchange', selectLinkedProject);
